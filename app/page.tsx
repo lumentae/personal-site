@@ -1,6 +1,3 @@
-import Image from "next/image";
-import Background from "@/components/background/background"
-import ContentContainer from "@/components/container/ContentContainer";
 import Header from "@/components/container/Header";
 import Content from "@/components/container/Content";
 import HorizontalDivider from "@/components/HorizontalDivider";
@@ -10,10 +7,11 @@ export default function Home() {
     return (
         <>
             <Common>
-            <Header heading="Welcome!" undertext="This is my awesome personal site!!!"></Header>
+                <Header heading="Welcome!" undertext="This is my awesome personal site!!!"></Header>
                 <Content>
-                    <p>Test!</p>
+                    <p>Welcome to my little corner of the internet!</p>
                     <HorizontalDivider />
+                    <Header heading="About me" size={2}></Header>
                 </Content>
             </Common>
         </>

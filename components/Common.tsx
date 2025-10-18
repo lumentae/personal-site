@@ -16,7 +16,7 @@ export default function Common({ children }: CommonProps) {
                 <Background></Background>
             </div>
             <main className="h-screen w-screen flex items-start justify-center overflow-hidden fixed pt-20 top-0 left-0">
-                <div className="fixed z-10 w-full max-w-5xl opacity-100">
+                <div className="fixed z-10 w-full max-w-5xl">
                     <ContentContainer>
                         {children}
                     </ContentContainer>
