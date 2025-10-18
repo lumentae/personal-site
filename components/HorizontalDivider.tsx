@@ -1,7 +1,5 @@
 export default function HorizontalDivider() {
     return (
-        <>
-            <hr className="mt-6 text-white/40"></hr>
-        </>
+        <hr className="text-white/40 mb-6"/>
     );
 }

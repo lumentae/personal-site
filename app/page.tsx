@@ -9,9 +9,10 @@ export default function Home() {
             <Common>
                 <Header heading="Welcome!" undertext="This is my awesome personal site!!!"></Header>
                 <Content>
-                    <p>Welcome to my little corner of the internet!</p>
                     <HorizontalDivider />
                     <Header heading="About me" size={2}></Header>
+                    <p>I love working with computers and tinkering with hardware projects!</p>
+                    <p>Outside of tech, I enjoy listening to music 🎵 and biking 🚲</p>
                 </Content>
             </Common>
         </>
