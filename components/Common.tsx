@@ -12,8 +12,8 @@ type CommonProps = {
 export default function Common({ children }: CommonProps) {
     return (
         <>
-            <main className="h-screen w-screen flex items-start justify-center overflow-hidden fixed pt-20 top-0 left-0">
-                <div className="fixed z-10 w-full max-w-5xl">
+            <main className="h-screen w-screen flex items-start justify-center overflow-y-auto fixed pt-20 top-0 left-0">
+                <div className="z-10 w-full max-w-5xl">
                     <ContentContainer>
                         {children}
                     </ContentContainer>

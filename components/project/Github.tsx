@@ -41,12 +41,6 @@ export type License = {
     node_id: string
 }
 
-export function RepositoryToProject(repository: Repository): ReactNode {
-    return (
-        <Project/>
-    )
-}
-
 export function GetRepositories(): Repository[] {
     let repositories: Repository[];
     let failReason: string = "";
