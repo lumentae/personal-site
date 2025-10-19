@@ -21,8 +21,8 @@ export default function Header(props: ContentContainerProps) {
     };
 
     return (
-        <div className="mb-8">
-            <h1 className={`${sizeClasses[size] || sizeClasses[4]} font-bold text-white mb-2`}>{props.heading}</h1>
+        <div className={`${size >= 4 ? "mb-8" : ""}`}>
+            <h1 className={`${sizeClasses[size] || sizeClasses[4]} font-bold text-white`}>{props.heading}</h1>
             {props.undertext === undefined ? "" : undertext}
         </div>
     );
