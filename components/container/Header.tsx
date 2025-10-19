@@ -1,3 +1,6 @@
+import { SettingsIcon } from "lucide-react";
+import Settings from "../Settings";
+
 type ContentContainerProps = {
     heading: string;
     undertext?: string;
@@ -36,6 +39,7 @@ export default function Header(props: ContentContainerProps) {
                 <div className="flex space-x-10 justify-around">
                     <a className="font-bold" href="/">Home</a>
                     <a className="font-bold" href="/projects">Projects</a>
+                    <Settings/>
                 </div>
             </div>
         );

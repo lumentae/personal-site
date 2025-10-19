@@ -4,6 +4,7 @@ import * as THREE from "three";
 import { Canvas, useFrame, extend, useThree } from "@react-three/fiber";
 import { shaderMaterial } from "@react-three/drei";
 import React, { useRef, useMemo } from "react";
+import { useSettings } from "@/store/zustand";
 
 const CreationMaterial = shaderMaterial(
     {
@@ -85,6 +86,12 @@ const ShaderObject = () => {
 }
 
 export default function Background() {
+    const { shaderBackground } = useSettings();
+
+    if (!shaderBackground) {
+        return null;
+    }
+
     return (
         <Canvas orthographic camera={{ position: [0, 0, 1], zoom: 1 }}>
             <ShaderObject />
