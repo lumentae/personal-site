@@ -60,11 +60,11 @@ const CreationMaterial = shaderMaterial(
 
 extend({ CreationMaterial });
 const ShaderObject = () => {
-    const mesh = useRef<THREE.Mesh>();
+    const mesh = useRef<THREE.Mesh>(null);
     const { size, gl } = useThree();
 
     useFrame((_state, delta: number) => {
-        (mesh.current.material as THREE.ShaderMaterial).uniforms.iTime.value += delta;
+        (mesh.current!.material as THREE.ShaderMaterial).uniforms.iTime.value += delta;
     });
 
     const uniforms = useMemo(() => (
@@ -78,6 +78,7 @@ const ShaderObject = () => {
     return (
         <mesh ref={mesh}>
             <planeGeometry args={[size.width, size.height]} />
+            {/* @ts-expect-error: creationMaterial is a custom material extended at runtime */}
             <creationMaterial {...uniforms} iResolution={[size.width, size.height]} />
         </mesh>
     )
