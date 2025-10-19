@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 
 type ContentContainerProps = {
-    children: ReactNode
+    children: ReactNode;
 };
 
 export default function ContentContainer({ children }: ContentContainerProps) {
