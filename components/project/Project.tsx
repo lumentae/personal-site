@@ -1,4 +1,4 @@
-import { CodeXmlIcon, FileCode2Icon, GitForkIcon, GitPullRequestIcon, GlobeIcon, StarIcon, TagIcon } from "lucide-react";
+import { CodeXmlIcon, FileCode2Icon, GitForkIcon, GitPullRequestIcon, GlobeIcon, ScrollTextIcon, StarIcon, TagIcon } from "lucide-react";
 import VerticalDivider from "../VerticalDivider";
 import Card from "../container/Card";
 import Tag from "./Tag";
@@ -13,6 +13,7 @@ type ProjectProps = {
     language?: string;
     issues?: number;
     forks?: number;
+    license?: string;
 };
 
 export default function Project(props: ProjectProps) {
@@ -51,25 +52,32 @@ export default function Project(props: ProjectProps) {
                             </div>
                         </div>
                     )}
-                    <div className="flex flex-wrap gap-2 mt-1 text-sm">
+                    <div className="flex flex-wrap gap-2 mt-1 text-sm items-center">
                         {props.language && (
                             <>
                                 <CodeXmlIcon size={iconSize}/>
                                 <span>{props.language}</span>
-                                {(props.forks !== undefined || props.issues !== undefined) && <VerticalDivider/>}
+                                {(props.forks !== undefined || props.issues !== undefined || props.license) && <VerticalDivider/>}
                             </>
                         )}
                         {props.forks !== undefined && (
                             <>
                                 <GitForkIcon size={iconSize}/>
                                 <span>{props.forks} {props.forks === 1 ? 'Fork' : 'Forks'}</span>
-                                {props.issues !== undefined && <VerticalDivider/>}
+                                {(props.issues !== undefined || props.license) && <VerticalDivider/>}
                             </>
                         )}
                         {props.issues !== undefined && (
                             <>
                                 <GitPullRequestIcon size={iconSize}/>
                                 <span>{props.issues} {props.issues === 1 ? 'Issue' : 'Issues'}</span>
+                                {props.license && <VerticalDivider/>}
+                            </>
+                        )}
+                        {props.license && (
+                            <>
+                                <ScrollTextIcon size={iconSize}/>
+                                <span>{props.license}</span>
                             </>
                         )}
                     </div>

@@ -40,6 +40,7 @@ export default async function Projects() {
                             language={repo.language}
                             issues={repo.open_issues_count}
                             forks={repo.forks_count}
+                            license={repo.license !== null ? repo.license.spdx_id : undefined}
                         />
                     ))}
                 </div>
