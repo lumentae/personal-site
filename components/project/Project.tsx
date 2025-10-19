@@ -1,4 +1,4 @@
-import { CodeXmlIcon, FileCode2, ForkKnifeIcon, GitPullRequest, GlobeIcon, StarIcon, TagIcon } from "lucide-react";
+import { CodeXmlIcon, FileCode2Icon, GitForkIcon, GitPullRequestIcon, GlobeIcon, StarIcon, TagIcon } from "lucide-react";
 import VerticalDivider from "../VerticalDivider";
 import Card from "../container/Card";
 import Tag from "./Tag";
@@ -31,13 +31,13 @@ export default function Project(props: ProjectProps) {
                 <div className="flex flex-col mt-4 gap-2">
                     {props.repoUrl && (
                         <div className="flex text-base gap-2">
-                            <GlobeIcon size={iconSize}/>
+                            <FileCode2Icon size={iconSize}/>
                             <a target="_blank" className="hover:underline" href={props.repoUrl}>{props.repoUrl}</a>
                         </div>
                     )}
                     {props.demo && (
                         <div className="flex text-base gap-2">
-                            <FileCode2 size={iconSize}/>
+                            <GlobeIcon size={iconSize}/>
                             <a target="_blank" className="hover:underline" href={props.demo}>{props.demo}</a>
                         </div>
                     )}
@@ -61,14 +61,14 @@ export default function Project(props: ProjectProps) {
                         )}
                         {props.forks !== undefined && (
                             <>
-                                <ForkKnifeIcon size={iconSize}/>
+                                <GitForkIcon size={iconSize}/>
                                 <span>{props.forks} {props.forks === 1 ? 'Fork' : 'Forks'}</span>
                                 {props.issues !== undefined && <VerticalDivider/>}
                             </>
                         )}
                         {props.issues !== undefined && (
                             <>
-                                <GitPullRequest size={iconSize}/>
+                                <GitPullRequestIcon size={iconSize}/>
                                 <span>{props.issues} {props.issues === 1 ? 'Issue' : 'Issues'}</span>
                             </>
                         )}
