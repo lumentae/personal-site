@@ -26,7 +26,7 @@ const CreationMaterial = shaderMaterial(
     void mainImage( out vec4 fragColor, in vec2 fragCoord )
     {
         float snow = 0.0;
-        float gradient = (1.0-float(fragCoord.y / iResolution.x))*0.15;
+        float gradient = 0.0;
         float random = fract(sin(dot(fragCoord.xy,vec2(12.9898,78.233)))* 43758.5453);
         for(int k=0;k<6;k++){
             for(int i=0;i<12;i++){
