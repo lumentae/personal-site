@@ -2,13 +2,12 @@ import Header from "@/components/container/Header";
 import Content from "@/components/container/Content";
 import Common from "@/components/Common";
 
-export default function Home() {
+export default function Projects() {
     return (
         <>
             <Common>
-                <Header heading="Welcome!" undertext="This is my awesome personal site!!!" showLinks></Header>
+                <Header heading="Projects" undertext="These are some of my projects that I have made" showLinks></Header>
                 <Content>
-                    <Header heading="About me" size={3}></Header>
                     <p>I love working with computers and tinkering with hardware projects!</p>
                     <p>Outside of tech, I enjoy listening to music 🎵 and biking 🚲</p>
                 </Content>

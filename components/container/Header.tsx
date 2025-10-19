@@ -2,11 +2,13 @@ type ContentContainerProps = {
     heading: string;
     undertext?: string;
     size?: number;
+    showLinks?: boolean;
 };
 
 export default function Header(props: ContentContainerProps) {
     const undertext = <p className="text-gray-400">{props.undertext}</p>;
-    const size = props.size === undefined ? 4 : props.size
+    const size: number = props.size ?? 4;
+    const showLinks: boolean = props.showLinks ?? false;
 
     const sizeClasses: Record<number, string> = {
         1: "text-xl",
@@ -20,10 +22,24 @@ export default function Header(props: ContentContainerProps) {
         9: "text-9xl",
     };
 
-    return (
+    let header = (
         <div className={`${size >= 4 ? "mb-8" : ""}`}>
             <h1 className={`${sizeClasses[size] || sizeClasses[4]} font-bold text-white`}>{props.heading}</h1>
             {props.undertext === undefined ? "" : undertext}
         </div>
-    );
+    )
+
+    if (showLinks) {
+        header = (
+            <div className="flex justify-between">
+                {header}
+                <div className="flex space-x-3 justify-around">
+                    <a href="/">Home</a>
+                    <a href="/projects">Projects</a>
+                </div>
+            </div>
+        );
+    }
+
+    return header;
 }
