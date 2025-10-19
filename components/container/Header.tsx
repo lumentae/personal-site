@@ -36,7 +36,7 @@ export default function Header(props: ContentContainerProps) {
         header = (
             <div className="flex justify-between">
                 {header}
-                <div className="flex space-x-10 justify-around">
+                <div className="flex space-x-5 justify-around">
                     <a className="font-bold" href="/">Home</a>
                     <a className="font-bold" href="/projects">Projects</a>
                     <Settings/>

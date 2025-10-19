@@ -33,7 +33,7 @@ export default function Project(props: ProjectProps) {
                     {props.repoUrl && (
                         <div className="flex text-base gap-2">
                             <FileCode2Icon size={iconSize}/>
-                            <a target="_blank" className="hover:underline" href={props.repoUrl}>{props.repoUrl}</a>
+                            <a target="_blank" className="hover:underline" href={props.repoUrl}>GitHub</a>
                         </div>
                     )}
                     {props.demo && (
