@@ -25,7 +25,7 @@ export default async function Projects() {
 
     return (
         <Common>
-            <Header heading="Projects" undertext="These are some of my projects that I have made" showLinks></Header>
+            <Header heading="Projects" undertext="These are some of the projects I made!" showLinks></Header>
             <Content>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-7">
                     {filteredRepos.map((repo) => (

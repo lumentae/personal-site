@@ -6,7 +6,7 @@ type CardProps = {
 
 export default function Card({ children }: CardProps) {
     return (
-        <div className="rounded-lg border border-white/20 backdrop-blur-md shadow-2xl p-3 h-full">
+        <div className="rounded-lg border border-white/20 hover:border-white/50 transition-colors backdrop-blur-md shadow-2xl p-3 h-full">
             {children}
         </div>
     );

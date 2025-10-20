@@ -6,8 +6,7 @@
 }
 
 body {
-  background: #131313;
-  background: linear-gradient(180deg,rgba(19, 19, 19, 1) 0%, rgba(39, 39, 39, 1) 100%);
+  background: linear-gradient(180deg,rgb(0, 0, 0) 0%, rgb(26, 26, 26) 100%);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -23,4 +22,8 @@ canvas {
 
 @keyframes fadeIn {
   to { opacity: 1; }
+}
+
+a:hover {
+  filter: brightness(60%);
 }
