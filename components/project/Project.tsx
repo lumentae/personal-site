@@ -24,22 +24,22 @@ export default function Project(props: ProjectProps) {
             <div className="flex flex-col py-2 px-4 h-full justify-between">
                 <div className="">
                     <div className="flex justify-between w-full">
-                        <h3 className="text-2xl font-bold">{props.name}</h3>
+                        <h3 className="text-xl font-bold">{props.name}</h3>
                         <p className="text-xl flex">{props.stars ?? 0} <StarIcon size={iconSize} className="ml-1 mt-1"/></p>
                     </div>
-                    <p className="text-lg mb-auto">{props.description ?? ""}</p>
+                    <p className="text-md mb-auto">{props.description ?? ""}</p>
                 </div>
                 <div className="flex flex-col mt-4 gap-2">
                     {props.repoUrl && (
                         <div className="flex text-base gap-2">
                             <FileCode2Icon size={iconSize}/>
-                            <a target="_blank" className="hover:underline" href={props.repoUrl}>GitHub</a>
+                            <a target="_blank" className="hover:underline text-sm" href={props.repoUrl}>GitHub</a>
                         </div>
                     )}
                     {props.demo && (
                         <div className="flex text-base gap-2">
                             <GlobeIcon size={iconSize}/>
-                            <a target="_blank" className="hover:underline" href={props.demo}>{props.demo}</a>
+                            <a target="_blank" className="hover:underline text-sm" href={props.demo}>{props.demo}</a>
                         </div>
                     )}
                     {props.tags && props.tags.length > 0 && (
