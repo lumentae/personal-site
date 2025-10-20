@@ -38,10 +38,14 @@ export default function Header(props: ContentContainerProps) {
         header = (
             <div className="flex justify-between">
                 {header}
-                <div className="flex space-x-5 justify-around">
-                    <div><a className="font-bold" href="/">Home</a></div>
-                    <div><a className="font-bold" href="/projects">Projects</a></div>
-                    <div><Settings/></div>
+                <div className="flex flex-col items-end gap-2">
+                    <div className="flex space-x-5">
+                        <div><a className="font-bold" href="/">Home</a></div>
+                        <div><a className="font-bold" href="/projects">Projects</a></div>
+                    </div>
+                    <div className="flex space-x-5">
+                        <div><Settings/></div>
+                    </div>
                 </div>
             </div>
         );

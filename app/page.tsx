@@ -7,7 +7,7 @@ export default function Home() {
     return (
         <>
             <Common>
-                <Header heading="Welcome!" undertext="This is my awesome personal site!!!" showLinks></Header>
+                <Header heading="Hi!" undertext="This is lumentae's awesome personal site!!!" showLinks></Header>
                 <Content>
                     <Header heading="About me" size={3}></Header>
                     <p>I love working with computers and tinkering with hardware projects!</p>

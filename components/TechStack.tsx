@@ -17,14 +17,14 @@ export default function TechStack(props: TechStackProps) {
             {props.categories.map((category, index) => (
                 <div key={index} className="mb-6">
                     <p className="font-bold text-lg mb-2">{category.name}</p>
-                    <p className="text-lg">
+                    <div className="text-lg flex flex-wrap gap-2">
                         {category.technologies.map((tech, techIndex) => (
-                            <span key={techIndex}>
+                            <span key={techIndex} className="inline-flex items-center">
                                 <Devicon name={tech} colored={!uncolored.includes(tech)} />
                                 {tech}
                             </span>
                         ))}
-                    </p>
+                    </div>
                 </div>
             ))}
         </>
