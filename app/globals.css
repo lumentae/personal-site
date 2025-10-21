@@ -24,6 +24,6 @@ canvas {
   to { opacity: 1; }
 }
 
-a:hover {
+a:hover, .darken {
   filter: brightness(60%);
 }

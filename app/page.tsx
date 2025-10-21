@@ -2,6 +2,7 @@ import Header from "@/components/container/Header";
 import Content from "@/components/container/Content";
 import Common from "@/components/Common";
 import TechStack from "@/components/TechStack";
+import Tag from "@/components/project/Tag";
 
 export default function Home() {
     return (
@@ -11,8 +12,10 @@ export default function Home() {
                 <Content>
                     <Header heading="About me" size={3}></Header>
                     <p>I love working with computers and tinkering with hardware projects!</p>
-                    <p>Outside of tech, I enjoy listening to music 🎵 and biking 🚲</p>
+                    <p>Outside of tech, I enjoy listening to music <em className="darken">(particularily jazz!)</em> and biking</p>
+                    <p>I'm also a member of <a className="darken underline" target="_blank" href="https://hackclub.com">Hackclub!</a></p>
                     <br/>
+
                     <Header heading="Tech" size={3}></Header>
                     <TechStack categories={[
                         { name: "frontend", technologies: ["html5", "css3", "javascript", "typescript", "react", "nextjs", "vite"] },
@@ -20,8 +23,24 @@ export default function Home() {
                         { name: "devops", technologies: ["git", "linux", "docker", "github", "cloudflare", "nginx", "proxmox", "ssh"] },
                         { name: "gamedev", technologies: ["roblox", "unity", "blender", "lua"] },
                         { name: "systems", technologies: ["c", "cplusplus", "android", "arduino", "raspberrypi"] },
-                        { name: "tools", technologies: ["bash", "powershell", "jetbrains", "vscode", "discord", "slack"] }
-                    ]} uncolored={["linux", "github", "discord", "nextjs", "ssh", "slack", "bash", "unity"]} />
+                        { name: "tools", technologies: ["bash", "powershell", "jetbrains", "vscode"] }
+                    ]} uncolored={["linux", "github", "nextjs", "ssh", "bash", "unity"]} />
+
+                    <Header heading="Homelab" size={3}></Header>
+                    <p>This website is hosted from my Dell Optiplex 3070 with Proxmox VE 9.0.11!</p>
+                    <p>I also have Jellyfin hostend on my local network along with the -arr stack</p>
+                    <p>And twice a year I host a minecraft server for friends in my school! <em className="darken">(21 people as of 21.10.2025)</em></p>
+                    <br/>
+
+                    <Header heading="Contact" size={3}></Header>
+                    <div className="flex">
+                        <div className="flex flex-wrap gap-2">
+                            <a className="underline" target="_blank" href="https://discord.com/users/695324879964340285"><Tag text="Discord" className="text-lg p-2 pl-4 pr-4"/></a>
+                            <a className="underline" target="_blank" href="https://hackclub.slack.com/team/U08B4GTKLDS"><Tag text="Slack" className="text-lg p-2 pl-4 pr-4"/></a>
+                            <a className="underline" target="_blank" href="https://steamcommunity.com/id/lumentae"><Tag text="Steam" className="text-lg p-2 pl-4 pr-4"/></a>
+                            <a className="underline" target="_blank" href="https://www.roblox.com/users/1578541231/profile"><Tag text="Roblox" className="text-lg p-2 pl-4 pr-4"/></a>
+                        </div>
+                    </div>
                 </Content>
             </Common>
         </>
