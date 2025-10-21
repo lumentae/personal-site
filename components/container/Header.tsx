@@ -1,4 +1,3 @@
-import { SettingsIcon } from "lucide-react";
 import Settings from "../Settings";
 
 type ContentContainerProps = {
@@ -13,7 +12,6 @@ export default function Header(props: ContentContainerProps) {
     const undertext = <p className="text-gray-400">{props.undertext}</p>;
     const size: number = props.size ?? 4;
     const showLinks: boolean = props.showLinks ?? false;
-    const noMargin: boolean = props.noMargin ?? false;
 
     const sizeClasses: Record<number, string> = {
         1: "text-xl",

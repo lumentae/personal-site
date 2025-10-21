@@ -62,7 +62,7 @@ const CreationMaterial = shaderMaterial(
 extend({ CreationMaterial });
 const ShaderObject = () => {
     const mesh = useRef<THREE.Mesh>(null);
-    const { size, gl } = useThree();
+    const { size } = useThree();
 
     useFrame((_state, delta: number) => {
         (mesh.current!.material as THREE.ShaderMaterial).uniforms.iTime.value += delta;
