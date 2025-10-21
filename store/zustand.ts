@@ -8,6 +8,9 @@ interface SettingsState {
   oneko: boolean;
   toggleOneko: () => void;
   
+  projectColors: boolean;
+  toggleProjectColors: () => void;
+  
   _hasHydrated: boolean;
   setHasHydrated: (state: boolean) => void;
 }
@@ -22,6 +25,10 @@ export const useSettings = create<SettingsState>()(
       oneko: true,
       toggleOneko: () => set((state) => ({
         oneko: !state.oneko
+      })),
+      projectColors: false,
+      toggleProjectColors: () => set((state) => ({
+        projectColors: !state.projectColors
       })),
       _hasHydrated: false,
       setHasHydrated: (state: boolean) => set({ _hasHydrated: state }),

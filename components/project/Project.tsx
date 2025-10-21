@@ -1,7 +1,10 @@
+"use client";
+
 import { ClockIcon, CodeXmlIcon, FileCode2Icon, GitForkIcon, GitPullRequestIcon, GlobeIcon, ScrollTextIcon, StarIcon, TagIcon } from "lucide-react";
 import VerticalDivider from "../VerticalDivider";
 import Card from "../container/Card";
 import Tag from "./Tag";
+import { useSettings } from "@/store/zustand";
 
 type ProjectProps = {
     name: string;
@@ -37,6 +40,8 @@ function calculateColor(props: ProjectProps) {
 }
 
 export default function Project(props: ProjectProps) {
+    const { projectColors } = useSettings();
+
     const iconSize = 20;
 
     const color = calculateColor(props);
@@ -46,7 +51,7 @@ export default function Project(props: ProjectProps) {
     };
 
     return (
-        <Card style={style}>
+        <Card style={projectColors ? style : undefined}>
             <div className="flex flex-col py-2 px-4 h-full justify-between">
                 <div>
                     <div className="flex justify-between w-full">
