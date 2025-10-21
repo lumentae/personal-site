@@ -24,7 +24,7 @@ function SettingsEntry(props: SettingsEntryProps) {
 
 export default function Settings() {
     const [opened, setOpened] = useState(false);
-    const { shaderBackground, toggleShaderBackground, oneko, toggleOneko, projectColors, toggleProjectColors } = useSettings();
+    const { shaderBackground, toggleShaderBackground, oneko, toggleOneko, projectColors, toggleProjectColors, backgroundGradient, toggleBackgroundGradient } = useSettings();
     const dropdownRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
@@ -71,6 +71,11 @@ export default function Settings() {
                         name="Project colors" 
                         value={projectColors} 
                         onToggle={toggleProjectColors}
+                    />
+                    <SettingsEntry 
+                        name="Background gradient" 
+                        value={backgroundGradient} 
+                        onToggle={toggleBackgroundGradient}
                     />
                 </div>
             </div>

@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Oneko from "@/components/Oneko";
 import Background from "@/components/background/background";
+import BackgroundGradient from "@/components/BackgroundGradient";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -36,6 +37,7 @@ export default function RootLayout({
           <Background />
         </div>
         <Oneko />
+        <BackgroundGradient />
         {children}
       </body>
     </html>

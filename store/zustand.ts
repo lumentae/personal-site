@@ -10,7 +10,10 @@ interface SettingsState {
   
   projectColors: boolean;
   toggleProjectColors: () => void;
-  
+
+  backgroundGradient: boolean;
+  toggleBackgroundGradient: () => void;
+
   _hasHydrated: boolean;
   setHasHydrated: (state: boolean) => void;
 }
@@ -29,6 +32,10 @@ export const useSettings = create<SettingsState>()(
       projectColors: false,
       toggleProjectColors: () => set((state) => ({
         projectColors: !state.projectColors
+      })),
+      backgroundGradient: false,
+      toggleBackgroundGradient: () => set((state) => ({
+        backgroundGradient: !state.backgroundGradient
       })),
       _hasHydrated: false,
       setHasHydrated: (state: boolean) => set({ _hasHydrated: state }),
