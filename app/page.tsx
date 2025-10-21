@@ -12,9 +12,14 @@ export default function Home() {
                 <Header heading="Hi!" undertext="This is lumentae's awesome personal site!!!" showLinks></Header>
                 <Content>
                     <Header heading="About me" size={3}></Header>
+                    <img 
+                        src="https://avatars.githubusercontent.com/u/66220444" 
+                        alt="profile picture" 
+                        className="w-24 h-24 rounded-full border-2 border-white/50"
+                    />
                     <p>I love working with computers and tinkering with hardware projects!</p>
                     <p>Outside of tech, I enjoy listening to music <em className="darken">(particularily jazz!)</em> and biking</p>
-                    <p>I'm also a member of <a className="darken underline" target="_blank" href="https://hackclub.com">Hackclub!</a></p>
+                    <p>I'm also a member of <a className="darken underline" target="_blank" href="https://hackclub.com">Hackclub</a>!</p>
                     <br/>
 
                     <Header heading="Tech" size={3}></Header>
@@ -29,7 +34,7 @@ export default function Home() {
 
                     <Header heading="Homelab" size={3}></Header>
                     <p>This website is hosted from my Dell Optiplex 3070 with Proxmox VE 9.0.11!</p>
-                    <p>I also have Jellyfin hostend on my local network along with the -arr stack</p>
+                    <p>I also have Jellyfin hostend on my local network along with the arr stack</p>
                     <p>And twice a year I host a minecraft server for friends in my school! <em className="darken">(21 people as of 21.10.2025)</em></p>
                     <br/>
 
