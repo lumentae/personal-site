@@ -41,7 +41,7 @@ export default async function Projects() {
                             issues={repo.open_issues_count}
                             forks={repo.forks_count}
                             license={repo.license !== null ? repo.license.spdx_id : undefined}
-                            lastUpdated={repo.created_at ? new Date(repo.created_at) : undefined}
+                            createdAt={repo.created_at ? new Date(repo.created_at) : undefined}
                         />
                     ))}
                 </div>

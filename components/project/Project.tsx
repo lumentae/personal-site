@@ -14,7 +14,7 @@ type ProjectProps = {
     issues?: number;
     forks?: number;
     license?: string;
-    lastUpdated?: Date;
+    createdAt?: Date;
 };
 
 function calculateColor(props: ProjectProps) {
@@ -28,7 +28,7 @@ function calculateColor(props: ProjectProps) {
                      + (props.issues?.toString())
                      + (props.forks?.toString())
                      + props.license
-                     + (props.lastUpdated?.toISOString() ?? "");
+                     + (props.createdAt?.toISOString() ?? "");
     let hash = 0;
     for (let i = 0; i < hashString.length; i++) {
         hash = hashString.charCodeAt(i) + ((hash << 5) - hash);
@@ -78,10 +78,10 @@ export default function Project(props: ProjectProps) {
                             </div>
                         </div>
                     )}
-                    {props.lastUpdated && (
+                    {props.createdAt && (
                         <div className="flex text-base gap-2">
                             <ClockIcon size={iconSize}/>
-                            <span>{props.lastUpdated.toLocaleDateString()}</span>
+                            <span>{props.createdAt.toLocaleDateString()}</span>
                         </div>
                     )}
                     <div className="flex flex-wrap gap-2 mt-1 text-sm items-center">
