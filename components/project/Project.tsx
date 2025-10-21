@@ -1,4 +1,4 @@
-import { CodeXmlIcon, FileCode2Icon, GitForkIcon, GitPullRequestIcon, GlobeIcon, ScrollTextIcon, StarIcon, TagIcon } from "lucide-react";
+import { ClockIcon, CodeXmlIcon, FileCode2Icon, GitForkIcon, GitPullRequestIcon, GlobeIcon, ScrollTextIcon, StarIcon, TagIcon } from "lucide-react";
 import VerticalDivider from "../VerticalDivider";
 import Card from "../container/Card";
 import Tag from "./Tag";
@@ -14,15 +14,41 @@ type ProjectProps = {
     issues?: number;
     forks?: number;
     license?: string;
+    lastUpdated?: Date;
 };
+
+function calculateColor(props: ProjectProps) {
+    const hashString = props.name
+                     + (props.description)
+                     + (props.stars?.toString())
+                     + (props.tags?.join(","))
+                     + (props.demo)
+                     + (props.repoUrl)
+                     + (props.language)
+                     + (props.issues?.toString())
+                     + (props.forks?.toString())
+                     + props.license
+                     + (props.lastUpdated?.toISOString() ?? "");
+    let hash = 0;
+    for (let i = 0; i < hashString.length; i++) {
+        hash = hashString.charCodeAt(i) + ((hash << 5) - hash);
+    }
+    return `hsl(${hash % 360}, 100%, 50%)`;
+}
 
 export default function Project(props: ProjectProps) {
     const iconSize = 20;
 
+    const color = calculateColor(props);
+    const style: React.CSSProperties = {
+        boxShadow: `0 0 15px 0 ${color}`,
+        border: `1px solid ${color}`
+    };
+
     return (
-        <Card>
+        <Card style={style}>
             <div className="flex flex-col py-2 px-4 h-full justify-between">
-                <div className="">
+                <div>
                     <div className="flex justify-between w-full">
                         <h3 className="text-xl font-bold">{props.name}</h3>
                         <p className="text-xl flex">{props.stars ?? 0} <StarIcon size={iconSize} className="ml-1 mt-1"/></p>
@@ -50,6 +76,12 @@ export default function Project(props: ProjectProps) {
                                     <Tag text={tag} key={i}/> 
                                 ))}
                             </div>
+                        </div>
+                    )}
+                    {props.lastUpdated && (
+                        <div className="flex text-base gap-2">
+                            <ClockIcon size={iconSize}/>
+                            <span>{props.lastUpdated.toLocaleDateString()}</span>
                         </div>
                     )}
                     <div className="flex flex-wrap gap-2 mt-1 text-sm items-center">
