@@ -24,7 +24,7 @@ function SettingsEntry(props: SettingsEntryProps) {
 
 export default function Settings() {
     const [opened, setOpened] = useState(false);
-    const { shaderBackground, toggleShaderBackground } = useSettings();
+    const { shaderBackground, toggleShaderBackground, oneko, toggleOneko } = useSettings();
     const dropdownRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
@@ -61,6 +61,11 @@ export default function Settings() {
                         name="Cool background" 
                         value={shaderBackground} 
                         onToggle={toggleShaderBackground}
+                    />
+                    <SettingsEntry 
+                        name="Oneko" 
+                        value={oneko} 
+                        onToggle={toggleOneko}
                     />
                 </div>
             </div>

@@ -2,7 +2,6 @@ import Header from "@/components/container/Header";
 import Content from "@/components/container/Content";
 import Common from "@/components/Common";
 import TechStack from "@/components/TechStack";
-import Tag from "@/components/project/Tag";
 import Card from "@/components/container/Card";
 
 export default function Home() {
