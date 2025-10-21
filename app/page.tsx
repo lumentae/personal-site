@@ -3,6 +3,7 @@ import Content from "@/components/container/Content";
 import Common from "@/components/Common";
 import TechStack from "@/components/TechStack";
 import Tag from "@/components/project/Tag";
+import Card from "@/components/container/Card";
 
 export default function Home() {
     return (
@@ -35,10 +36,10 @@ export default function Home() {
                     <Header heading="Contact" size={3}></Header>
                     <div className="flex">
                         <div className="flex flex-wrap gap-2">
-                            <a className="underline" target="_blank" href="https://discord.com/users/695324879964340285"><Tag text="Discord" className="text-lg p-2 pl-4 pr-4"/></a>
-                            <a className="underline" target="_blank" href="https://hackclub.slack.com/team/U08B4GTKLDS"><Tag text="Slack" className="text-lg p-2 pl-4 pr-4"/></a>
-                            <a className="underline" target="_blank" href="https://steamcommunity.com/id/lumentae"><Tag text="Steam" className="text-lg p-2 pl-4 pr-4"/></a>
-                            <a className="underline" target="_blank" href="https://www.roblox.com/users/1578541231/profile"><Tag text="Roblox" className="text-lg p-2 pl-4 pr-4"/></a>
+                            <a className="underline" target="_blank" href="https://discord.com/users/695324879964340285"><Card>Discord</Card></a>
+                            <a className="underline" target="_blank" href="https://hackclub.slack.com/team/U08B4GTKLDS"><Card>Slack</Card></a>
+                            <a className="underline" target="_blank" href="https://steamcommunity.com/id/lumentae"><Card>Steam</Card></a>
+                            <a className="underline" target="_blank" href="https://www.roblox.com/users/1578541231/profile"><Card>Roblox</Card></a>
                         </div>
                     </div>
                 </Content>
