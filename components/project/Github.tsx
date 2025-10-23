@@ -1,6 +1,3 @@
-import { ReactNode } from "react"
-import Project from "./Project"
-
 export type Repository = {
     name: string
     full_name: string
