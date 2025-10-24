@@ -23,7 +23,7 @@ export default function Home() {
 
                     <Header heading="Homelab" size={3}></Header>
                     <p>This website is hosted from my Dell Optiplex 3070 with Proxmox VE 9.0.11!</p>
-                    <p>I also have Jellyfin hostend on my local network along with the arr stack</p>
+                    <p>I also have Jellyfin hosted on my local network along with the arr stack</p>
                     <p>And twice a year I host a minecraft server for friends in my school! <em className="darken">(21 people as of 21.10.2025)</em></p>
                     <br/>
 
