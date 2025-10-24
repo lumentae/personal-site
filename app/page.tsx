@@ -48,6 +48,7 @@ export default function Home() {
                     <div className="flex">
                         <div className="flex flex-wrap gap-2">
                             <a className="underline" target="_blank" href="https://discord.com/users/695324879964340285"><Card>Discord</Card></a>
+                            <a className="underline" target="_blank" href="mailto:contact@lumentae.dev"><Card>Email</Card></a>
                             <a className="underline" target="_blank" href="https://hackclub.slack.com/team/U08B4GTKLDS"><Card>Slack</Card></a>
                             <a className="underline" target="_blank" href="https://steamcommunity.com/id/lumentae"><Card>Steam</Card></a>
                             <a className="underline" target="_blank" href="https://anilist.co/user/lumentae"><Card>AniList</Card></a>
