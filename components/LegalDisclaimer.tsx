@@ -11,7 +11,7 @@ export default function LegalDisclaimer() {
                 All trademarks, logos and brand names are the property of their respective owners.
                 All company, product and service names used in this website are for identification purposes only.
                 The use of these names, trademarks and brands does not imply endorsement.
-                Please contact me at contact@lumentae.dev if any problems arise, and I will address the issue promptly.
+                Please contact me at <a className="underline darken" href="mailto:contact@lumentae.dev">contact@lumentae.dev</a> if any problems arise, and I will address the issue promptly.
             </p>
         </footer>
     );
