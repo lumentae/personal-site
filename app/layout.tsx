@@ -3,7 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Oneko from "@/components/Oneko";
 import Background from "@/components/background/background";
-import BackgroundGradient from "@/components/BackgroundGradient";
+import BodyStyleModifiers from "@/components/BodyStyleModifiers";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,12 +32,13 @@ export default function RootLayout({
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        style={{ colorScheme: "dark" }}
       >
         <div className="h-screen w-screen">
           <Background />
         </div>
         <Oneko />
-        <BackgroundGradient />
+        <BodyStyleModifiers />
         {children}
       </body>
     </html>

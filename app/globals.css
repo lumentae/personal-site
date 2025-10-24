@@ -1,9 +1,13 @@
 @import "tailwindcss";
 
 :root {
-  --foreground: #ffffff;
+  --foreground: #fff;
   --background: #000;
   --background-gradient: linear-gradient(180deg,rgb(0, 0, 0) 0%, rgb(26, 26, 26) 100%);
+}
+
+.seasonalEvents {
+  --foreground: #ff4b04;
 }
 
 body {
@@ -42,4 +46,8 @@ canvas {
 
 a:hover, .darken {
   filter: brightness(60%);
+}
+
+p, span {
+  @apply transition-colors;
 }

@@ -14,6 +14,9 @@ interface SettingsState {
   backgroundGradient: boolean;
   toggleBackgroundGradient: () => void;
 
+  seasonalEvents: boolean;
+  toggleSeasonalEvents: () => void;
+
   _hasHydrated: boolean;
   setHasHydrated: (state: boolean) => void;
 }
@@ -36,6 +39,10 @@ export const useSettings = create<SettingsState>()(
       backgroundGradient: false,
       toggleBackgroundGradient: () => set((state) => ({
         backgroundGradient: !state.backgroundGradient
+      })),
+      seasonalEvents: true,
+      toggleSeasonalEvents: () => set((state) => ({
+        seasonalEvents: !state.seasonalEvents
       })),
       _hasHydrated: false,
       setHasHydrated: (state: boolean) => set({ _hasHydrated: state }),

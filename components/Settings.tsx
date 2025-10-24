@@ -24,7 +24,13 @@ function SettingsEntry(props: SettingsEntryProps) {
 
 export default function Settings() {
     const [opened, setOpened] = useState(false);
-    const { shaderBackground, toggleShaderBackground, oneko, toggleOneko, projectColors, toggleProjectColors, backgroundGradient, toggleBackgroundGradient } = useSettings();
+    const { 
+        shaderBackground, toggleShaderBackground,
+        oneko, toggleOneko,
+        projectColors, toggleProjectColors,
+        backgroundGradient, toggleBackgroundGradient,
+        seasonalEvents, toggleSeasonalEvents,
+    } = useSettings();
     const dropdownRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
@@ -45,37 +51,42 @@ export default function Settings() {
 
     return (
         <div className="relative" ref={dropdownRef}>
-            <SettingsIcon 
-                className="cursor-pointer hover:text-white/80 transition-colors" 
-                onClick={() => setOpened(!opened)} 
+            <SettingsIcon
+                className="cursor-pointer hover:brightness-60 transition-colors"
+                onClick={() => setOpened(!opened)}
             />
-            <div 
+            <div
                 className={`absolute right-0 mt-2 w-48 rounded-lg border border-white/20 backdrop-blur-md shadow-2xl p-2 z-50 transition-all duration-300 ease-in-out ${
-                    opened 
-                        ? 'opacity-100 translate-y-0 pointer-events-auto' 
+                    opened
+                        ? 'opacity-100 translate-y-0 pointer-events-auto'
                         : 'opacity-0 -translate-y-2 pointer-events-none'
                 }`}
             >
                 <div className="space-y-1">
-                    <SettingsEntry 
-                        name="Cool background" 
-                        value={shaderBackground} 
+                    <SettingsEntry
+                        name="Cool background"
+                        value={shaderBackground}
                         onToggle={toggleShaderBackground}
                     />
-                    <SettingsEntry 
-                        name="Oneko" 
-                        value={oneko} 
+                    <SettingsEntry
+                        name="Oneko"
+                        value={oneko}
                         onToggle={toggleOneko}
                     />
-                    <SettingsEntry 
-                        name="Project colors" 
-                        value={projectColors} 
+                    <SettingsEntry
+                        name="Project colors"
+                        value={projectColors}
                         onToggle={toggleProjectColors}
                     />
-                    <SettingsEntry 
-                        name="Background gradient" 
-                        value={backgroundGradient} 
+                    <SettingsEntry
+                        name="Background gradient"
+                        value={backgroundGradient}
                         onToggle={toggleBackgroundGradient}
+                    />
+                    <SettingsEntry
+                        name="Seasonal events"
+                        value={seasonalEvents}
+                        onToggle={toggleSeasonalEvents}
                     />
                 </div>
             </div>

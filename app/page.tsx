@@ -9,7 +9,7 @@ export default function Home() {
     return (
         <>
             <Common>
-                <Header heading="Hi!" undertext="This is lumentae's awesome personal site!!!" showLinks></Header>
+                <Header heading="Hi!" undertext="This is my awesome personal site!!!" showLinks></Header>
                 <Content>
                     <Header heading="About me" size={3}></Header>
                     <img 
@@ -39,7 +39,7 @@ export default function Home() {
                             <p>My job is to guide and warn younger students of the dangers of media and technology.</p>
                         </Card>
                         <Card>
-                            <p>Due to being good at computer science, I was invited to <Tooltip text="Hochbegabtenstiftungen" tooltip="Institute for gifted and talented students" /> in 2025!</p>
+                            <p>Due to being good at computer science, I was invited to a few <Tooltip text="Hochbegabtenstiftungen" tooltip="Institute for gifted and talented students" /> in 2025!</p>
                         </Card>
                     </div>
                     <br/>

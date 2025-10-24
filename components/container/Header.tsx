@@ -9,7 +9,7 @@ type ContentContainerProps = {
 };
 
 export default function Header(props: ContentContainerProps) {
-    const undertext = <p className="text-gray-400">{props.undertext}</p>;
+    const undertext = <p className="darken transition-colors">{props.undertext}</p>;
     const size: number = props.size ?? 4;
     const showLinks: boolean = props.showLinks ?? false;
 
@@ -27,7 +27,7 @@ export default function Header(props: ContentContainerProps) {
 
     let header = (
         <div className={`${size >= 4 ? "mb-8" : ""}`}>
-            <h1 className={`${sizeClasses[size] || sizeClasses[4]} font-bold text-white`}>{props.heading}</h1>
+            <h1 className={`${sizeClasses[size] || sizeClasses[4]} font-bold transition-colors`}>{props.heading}</h1>
             {props.undertext === undefined ? "" : undertext}
         </div>
     )
