@@ -12,7 +12,7 @@ export default function Home() {
             <Common>
                 <Header heading="Hi!" undertext="This is my awesome personal site!!!" showLinks></Header>
                 <Content>
-                    <Header heading="About me" size={3}></Header>
+                    <Header heading="about me" size={3}></Header>
                     <img 
                         src="https://avatars.githubusercontent.com/u/66220444" 
                         alt="profile picture" 
@@ -23,13 +23,13 @@ export default function Home() {
                     <p>I'm also a member of <a className="darken underline" target="_blank" href="https://hackclub.com">Hackclub</a>!</p>
                     <br/>
 
-                    <Header heading="Homelab" size={3}></Header>
+                    <Header heading="homelab" size={3}></Header>
                     <p>This website is hosted from my Dell Optiplex 3070 with Proxmox VE 9.0.11!</p>
                     <p>I also host Jellyfin on my local network along with the <Tooltip text="arr stack" tooltip="Sonarr, Radarr, Prowlarr, etc" />.</p>
                     <p>And twice a year I host a minecraft server for friends in my school! <em className="darken">(21 people as of 21.10.2025)</em></p>
                     <br/>
 
-                    <Header heading="School stuff" size={3}></Header>
+                    <Header heading="school stuff" size={3}></Header>
                     <div className="grid grid-cols-2 md:grid-cols-3 gap-7">
                         <Card>
                             <p>I'm a member of our robotics club.</p>
@@ -45,7 +45,7 @@ export default function Home() {
                     </div>
                     <br/>
 
-                    <Header heading="Contact" size={3}></Header>
+                    <Header heading="contact" size={3}></Header>
                     <div className="flex">
                         <div className="flex flex-wrap gap-2">
                             <a className="underline" target="_blank" href="mailto:contact@lumentae.dev"><Card>Email</Card></a>
@@ -59,7 +59,7 @@ export default function Home() {
                     </div>
                     <br/>
 
-                    <Header heading="Buttons" size={3}></Header>
+                    <Header heading="buttons" size={3}></Header>
                     <div className="flex flex-wrap gap-2">
                         <Button88x31 source="lumentae.gif" />
                         <Button88x31 source="hackclub.png" link="https://hackclub.com"/>
@@ -74,7 +74,7 @@ export default function Home() {
                     </div>
                     <br/>
 
-                    <Header heading="Tech" size={3}></Header>
+                    <Header heading="tech" size={3}></Header>
                     <TechStack categories={[
                         { name: "frontend", technologies: ["html5", "css3", "typescript", "nextjs"] },
                         { name: "backend", technologies: ["php", "csharp", "java", "kotlin"] },
