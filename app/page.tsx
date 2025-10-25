@@ -5,6 +5,7 @@ import TechStack from "@/components/TechStack";
 import Card from "@/components/container/Card";
 import Tooltip from "@/components/Tooltip";
 import Button88x31 from "@/components/Button88x31";
+import Devicon from "@/components/icons/Devicon";
 
 export default function Home() {
     return (
@@ -24,7 +25,7 @@ export default function Home() {
                     <br/>
 
                     <Header heading="homelab" size={3}></Header>
-                    <p>This website is hosted from my Dell Optiplex 3070 with Proxmox VE 9.0.11!</p>
+                    <p>This website is hosted from my Dell Optiplex 3070 with <Devicon name="proxmox" wordmark padding={false} /> Proxmox VE 9.0.11!</p>
                     <p>I also host Jellyfin on my local network along with the <Tooltip text="arr stack" tooltip="Sonarr, Radarr, Prowlarr, etc" />.</p>
                     <p>And twice a year I host a minecraft server for friends in my school! <em className="darken">(21 people as of 21.10.2025)</em></p>
                     <br/>
