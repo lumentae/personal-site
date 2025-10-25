@@ -21,14 +21,14 @@ export default function Home() {
                     />
                     <p>I love working with computers and tinkering with hardware projects!</p>
                     <p>Outside of tech, I enjoy listening to music <em className="darken">(particularily jazz!)</em> and biking.</p>
-                    <p>I'm also a member of <a className="darken underline" target="_blank" href="https://hackclub.com">Hackclub</a>!</p>
+                    <p>I'm also a member of <a className="darken hover:opacity-80 transition-opacity underline" target="_blank" href="https://hackclub.com">Hackclub</a>!</p>
                     <br/>
 
                     <Header heading="homelab" size={3}></Header>
                     <p>This website is hosted from my Dell Optiplex 3070 with <Devicon name="proxmox" wordmark padding={false} /> Proxmox VE 9.0.11.</p>
                     <p>I also host Jellyfin on my local network along with the <Tooltip text="arr stack" tooltip="Sonarr, Radarr, Prowlarr, etc" />.</p>
                     <p>And twice a year I host a minecraft server for friends in my school. <em className="darken">(21 people as of 21.10.2025)</em></p>
-                    <p className="md:pl-6 darken">=&gt; I made utilities for managing and deploying the server! (<a className="darken underline" target="_blank" href="https://github.com/lumentae/provisioner">provisioner</a> and <a className="darken underline" target="_blank" href="https://github.com/lumentae/lattice">lattice</a>)</p>
+                    <p className="md:pl-6 darken">=&gt; I made utilities for managing and deploying the server! (<a className="darken hover:opacity-80 transition-opacity underline" target="_blank" href="https://github.com/lumentae/provisioner">provisioner</a> and <a className="darken hover:opacity-80 transition-opacity underline" target="_blank" href="https://github.com/lumentae/lattice">lattice</a>)</p>
                     <br/>
 
                     <Header heading="school stuff" size={3}></Header>
@@ -50,13 +50,13 @@ export default function Home() {
                     <Header heading="contact" size={3}></Header>
                     <div className="flex">
                         <div className="flex flex-wrap gap-2">
-                            <a className="underline" target="_blank" href="mailto:contact@lumentae.dev"><Card>Email</Card></a>
-                            <a className="underline" target="_blank" href="https://github.com/lumentae"><Card>GitHub</Card></a>
-                            <a className="underline" target="_blank" href="https://discord.com/users/695324879964340285"><Card>Discord</Card></a>
-                            <a className="underline" target="_blank" href="https://hackclub.slack.com/team/U08B4GTKLDS"><Card>Slack</Card></a>
-                            <a className="underline" target="_blank" href="https://steamcommunity.com/id/lumentae"><Card>Steam</Card></a>
-                            <a className="underline" target="_blank" href="https://anilist.co/user/lumentae"><Card>AniList</Card></a>
-                            <a className="underline" target="_blank" href="https://www.roblox.com/users/1578541231/profile"><Card>Roblox</Card></a>
+                            <a className="underline hover:opacity-80 transition-opacity" target="_blank" href="mailto:contact@lumentae.dev"><Card>Email</Card></a>
+                            <a className="underline hover:opacity-80 transition-opacity" target="_blank" href="https://github.com/lumentae"><Card>GitHub</Card></a>
+                            <a className="underline hover:opacity-80 transition-opacity" target="_blank" href="https://discord.com/users/695324879964340285"><Card>Discord</Card></a>
+                            <a className="underline hover:opacity-80 transition-opacity" target="_blank" href="https://hackclub.slack.com/team/U08B4GTKLDS"><Card>Slack</Card></a>
+                            <a className="underline hover:opacity-80 transition-opacity" target="_blank" href="https://steamcommunity.com/id/lumentae"><Card>Steam</Card></a>
+                            <a className="underline hover:opacity-80 transition-opacity" target="_blank" href="https://anilist.co/user/lumentae"><Card>AniList</Card></a>
+                            <a className="underline hover:opacity-80 transition-opacity" target="_blank" href="https://www.roblox.com/users/1578541231/profile"><Card>Roblox</Card></a>
                         </div>
                     </div>
                     <br/>
@@ -64,6 +64,7 @@ export default function Home() {
                     <Header heading="buttons" size={3}></Header>
                     <div className="flex flex-wrap gap-2">
                         <Button88x31 source="lumentae.gif" />
+                        <Button88x31 source="int4_t.png" link="https://int4.cc"/>
                         <Button88x31 source="hackclub.png" link="https://hackclub.com"/>
                         <Button88x31 source="console_wii.png" />
                         <Button88x31 source="linuxonline.gif" />

@@ -7,7 +7,7 @@ export default function Button88x31(props: Button88x31Props) {
     let image = <img className="img88x31" src={props.source} alt={"88x31 Button: " + props.source} />;
 
     if (props.link !== undefined) {
-        image = <a href={props.link} target="_blank">{image}</a>;
+        image = <a href={props.link} target="_blank" className="hover:opacity-75 transition-opacity">{image}</a>;
     }
 
     return image;

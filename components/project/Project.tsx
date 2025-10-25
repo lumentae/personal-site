@@ -64,13 +64,13 @@ export default function Project(props: ProjectProps) {
                     {props.repoUrl && (
                         <div className="flex text-base gap-2">
                             <FileCode2Icon size={iconSize}/>
-                            <a target="_blank" className="hover:underline text-sm darken underline" href={props.repoUrl}>GitHub</a>
+                            <a target="_blank" className="hover:underline text-sm darken underline hover:opacity-80 transition-opacity" href={props.repoUrl}>GitHub</a>
                         </div>
                     )}
                     {props.demo && (
                         <div className="flex text-base gap-2">
                             <GlobeIcon size={iconSize}/>
-                            <a target="_blank" className="hover:underline text-sm darken underline" href={props.demo}>{props.demo}</a>
+                            <a target="_blank" className="hover:underline text-sm darken underline hover:opacity-80 transition-opacity" href={props.demo}>{props.demo}</a>
                         </div>
                     )}
                     {props.tags && props.tags.length > 0 && (

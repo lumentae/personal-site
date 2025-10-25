@@ -38,8 +38,8 @@ export default function Header(props: ContentContainerProps) {
                 {header}
                 <div className="flex flex-col items-end gap-2">
                     <div className="flex space-x-5">
-                        <div><a className="font-bold" href="/">Home</a></div>
-                        <div><a className="font-bold" href="/projects">Projects</a></div>
+                        <div><a className="font-bold hover:opacity-60 transition-opacity" href="/">Home</a></div>
+                        <div><a className="font-bold hover:opacity-60 transition-opacity" href="/projects">Projects</a></div>
                     </div>
                     <div className="flex space-x-5">
                         <div><Settings/></div>
