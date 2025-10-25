@@ -4,6 +4,7 @@ import Common from "@/components/Common";
 import TechStack from "@/components/TechStack";
 import Card from "@/components/container/Card";
 import Tooltip from "@/components/Tooltip";
+import Button88x31 from "@/components/Button88x31";
 
 export default function Home() {
     return (
@@ -18,13 +19,13 @@ export default function Home() {
                         className="w-24 h-24 rounded-full border-2 border-white/50"
                     />
                     <p>I love working with computers and tinkering with hardware projects!</p>
-                    <p>Outside of tech, I enjoy listening to music <em className="darken">(particularily jazz!)</em> and biking</p>
+                    <p>Outside of tech, I enjoy listening to music <em className="darken">(particularily jazz!)</em> and biking.</p>
                     <p>I'm also a member of <a className="darken underline" target="_blank" href="https://hackclub.com">Hackclub</a>!</p>
                     <br/>
 
                     <Header heading="Homelab" size={3}></Header>
                     <p>This website is hosted from my Dell Optiplex 3070 with Proxmox VE 9.0.11!</p>
-                    <p>I also have Jellyfin hosted on my local network along with the arr stack</p>
+                    <p>I also host Jellyfin on my local network along with the <Tooltip text="arr stack" tooltip="Sonarr, Radarr, Prowlarr, etc" />.</p>
                     <p>And twice a year I host a minecraft server for friends in my school! <em className="darken">(21 people as of 21.10.2025)</em></p>
                     <br/>
 
@@ -39,7 +40,7 @@ export default function Home() {
                             <p>My job is to guide and warn younger students of the dangers of media and technology.</p>
                         </Card>
                         <Card>
-                            <p>Due to being good at computer science, I was invited to a few <Tooltip text="Hochbegabtenstiftungen" tooltip="Institute for gifted and talented students" /> in 2025!</p>
+                            <p>Due to being good at computer science, I was invited to a few <Tooltip text="Hochbegabtenstiftungen" tooltip="Institutes for gifted and talented students" /> in 2025!</p>
                         </Card>
                     </div>
                     <br/>
@@ -47,23 +48,40 @@ export default function Home() {
                     <Header heading="Contact" size={3}></Header>
                     <div className="flex">
                         <div className="flex flex-wrap gap-2">
-                            <a className="underline" target="_blank" href="https://discord.com/users/695324879964340285"><Card>Discord</Card></a>
                             <a className="underline" target="_blank" href="mailto:contact@lumentae.dev"><Card>Email</Card></a>
+                            <a className="underline" target="_blank" href="https://github.com/lumentae"><Card>GitHub</Card></a>
+                            <a className="underline" target="_blank" href="https://discord.com/users/695324879964340285"><Card>Discord</Card></a>
                             <a className="underline" target="_blank" href="https://hackclub.slack.com/team/U08B4GTKLDS"><Card>Slack</Card></a>
                             <a className="underline" target="_blank" href="https://steamcommunity.com/id/lumentae"><Card>Steam</Card></a>
                             <a className="underline" target="_blank" href="https://anilist.co/user/lumentae"><Card>AniList</Card></a>
                             <a className="underline" target="_blank" href="https://www.roblox.com/users/1578541231/profile"><Card>Roblox</Card></a>
                         </div>
                     </div>
+                    <br/>
+
+                    <Header heading="Buttons" size={3}></Header>
+                    <div className="flex flex-wrap gap-2">
+                        <Button88x31 source="lumentae.gif" />
+                        <Button88x31 source="hackclub.png" link="https://hackclub.com"/>
+                        <Button88x31 source="console_wii.png" />
+                        <Button88x31 source="linuxonline.gif" />
+                        <Button88x31 source="hatemac.jpg" />
+                        <Button88x31 source="saynotoweb3.gif" />
+                        <Button88x31 source="madeon_linux.gif" />
+                        <Button88x31 source="powered-cpp.gif" />
+                        <Button88x31 source="transistor_cafe.gif" />
+                        <Button88x31 source="transnow2.gif" />
+                    </div>
+                    <br/>
 
                     <Header heading="Tech" size={3}></Header>
                     <TechStack categories={[
-                        { name: "frontend", technologies: ["html5", "css3", "javascript", "typescript", "react", "nextjs", "vite"] },
+                        { name: "frontend", technologies: ["html5", "css3", "typescript", "nextjs"] },
                         { name: "backend", technologies: ["php", "csharp", "java", "kotlin"] },
-                        { name: "devops", technologies: ["git", "linux", "docker", "github", "cloudflare", "nginx", "proxmox", "ssh"] },
+                        { name: "devops", technologies: ["linux", "docker", "github", "nginx", "proxmox", "ssh"] },
                         { name: "gamedev", technologies: ["roblox", "unity", "blender", "lua"] },
                         { name: "systems", technologies: ["c", "cplusplus", "android", "arduino", "raspberrypi"] },
-                        { name: "tools", technologies: ["bash", "powershell", "jetbrains", "vscode"] }
+                        { name: "tools", technologies: ["bash", "powershell", "vscode"] }
                     ]} uncolored={["linux", "github", "nextjs", "ssh", "bash", "unity"]} />
                 </Content>
             </Common>

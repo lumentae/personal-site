@@ -52,3 +52,10 @@ a:hover, .darken {
 p, span {
   @apply transition-colors;
 }
+
+.img88x31 {
+  image-rendering: auto;
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
+  image-rendering: -webkit-optimize-contrast;
+}
