@@ -40,7 +40,7 @@ export const useSettings = create<SettingsState>()(
       toggleBackgroundGradient: () => set((state) => ({
         backgroundGradient: !state.backgroundGradient
       })),
-      seasonalEvents: true,
+      seasonalEvents: false,
       toggleSeasonalEvents: () => set((state) => ({
         seasonalEvents: !state.seasonalEvents
       })),
