@@ -65,7 +65,7 @@ export default function Home() {
 
                     <Header heading="buttons" size={3} undertext="feel free to add mine to your website!"></Header>
                     <div className="flex flex-wrap gap-2">
-                        <div onClick={() => navigator.clipboard.writeText(`<a href="https://lumentae.dev"><img src="https://lumentae.dev/button.gif" alt="lumentae" title="lumentae"/></a>`)} className="hover:opacity-75 transition-opacity cursor-pointer">
+                        <div onClick={() => navigator.clipboard.writeText(`<a href="https://lumentae.dev"><img src="https://lumentae.dev/lumentae.gif" alt="lumentae" title="lumentae"/></a>`)} className="hover:opacity-75 transition-opacity cursor-pointer">
                             <Button88x31 source="lumentae.gif" />
                         </div>
                         <p className="darken text-sm">(click to copy!)</p>
@@ -76,7 +76,7 @@ export default function Home() {
                         <Button88x31 source="hackclub.png" link="https://hackclub.com" />
                         <Button88x31 source="gg1.png" />
                         <Button88x31 source="blödsinn.gif" />
-                        <Button88x31 source="internetarchive.gif" />
+                        <Button88x31 source="internetarchive.gif" link="https://archive.org" />
                         <Button88x31 source="anybrowser.gif" />
                         <Button88x31 source="noai.gif" />
                         <Button88x31 source="console_wii.png" />
