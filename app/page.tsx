@@ -1,3 +1,5 @@
+"use client";
+
 import Header from "@/components/container/Header";
 import Content from "@/components/container/Content";
 import Common from "@/components/Common";
@@ -61,13 +63,18 @@ export default function Home() {
                     </div>
                     <br/>
 
-                    <Header heading="buttons" size={3}></Header>
+                    <Header heading="buttons" size={3} undertext="feel free to add mine to your website!"></Header>
                     <div className="flex flex-wrap gap-2">
-                        <Button88x31 source="lumentae.gif" />
-                        <Button88x31 source="int4_t.png" link="https://int4.cc"/>
-                        <Button88x31 source="hackclub.png" link="https://hackclub.com"/>
+                        <div onClick={() => navigator.clipboard.writeText(`<a href="https://lumentae.dev"><img src="https://lumentae.dev/button.gif" alt="lumentae" title="lumentae"/></a>`)} className="hover:opacity-75 transition-opacity">
+                            <Button88x31 source="lumentae.gif" />
+                        </div>
+                        <p className="darken text-sm">(click to copy!)</p>
+                    </div>
+                    <div className="flex flex-wrap gap-2">
+                        <Button88x31 source="https://int4.cc/88x31.png" link="https://int4.cc" />
+                        <Button88x31 source="hackclub.png" link="https://hackclub.com" />
                         <Button88x31 source="console_wii.png" />
-                        <Button88x31 source="linuxonline.gif" />
+                        <Button88x31 source="linuxonline.gif" link="https://www.kernel.org/" />
                         <Button88x31 source="hatemac.jpg" />
                         <Button88x31 source="saynotoweb3.gif" />
                         <Button88x31 source="madeon_linux.gif" />
