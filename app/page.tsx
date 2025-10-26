@@ -15,15 +15,19 @@ export default function Home() {
             <Common>
                 <Header heading="Hi!" undertext="This is my awesome personal site!!!" showLinks></Header>
                 <Content>
-                    <Header heading="about me" size={3}></Header>
-                    <img 
-                        src="https://avatars.githubusercontent.com/u/66220444" 
-                        alt="profile picture" 
-                        className="w-24 h-24 rounded-full border-2 border-white/50"
-                    />
-                    <p>I love working with computers and tinkering with hardware projects!</p>
-                    <p>Outside of tech, I enjoy listening to music <em className="darken">(particularily jazz!)</em> and biking.</p>
-                    <p>I'm also a member of <a className="darken hover:opacity-80 transition-opacity underline" target="_blank" href="https://hackclub.com">Hackclub</a>!</p>
+                    <div className="flex flex-col md:flex-row gap-4 items-center md:items-start">
+                        <img 
+                            src="https://avatars.githubusercontent.com/u/66220444" 
+                            alt="profile picture" 
+                            className="w-24 h-24 rounded-full border-2 border-white/50 shrink-0 order-1 md:order-2"
+                        />
+                        <div className="flex-1 order-2 md:order-1">
+                            <Header heading="about me" size={3}></Header>
+                            <p>I love working with computers and tinkering with hardware projects!</p>
+                            <p>Outside of tech, I enjoy listening to music <em className="darken">(particularily jazz!)</em> and biking.</p>
+                            <p>I'm also a member of <a className="darken hover:opacity-80 transition-opacity underline" target="_blank" href="https://hackclub.com">Hackclub</a>!</p>
+                        </div>
+                    </div>
                     <br/>
 
                     <Header heading="homelab" size={3}></Header>
@@ -43,7 +47,7 @@ export default function Home() {
                             <p>I'm also a <Tooltip text="Medienscout" tooltip="Someone that guides and warns younger students of the dangers of media and technology"/> at my school!</p>
                             <p>My job is to guide and warn younger students of the dangers of media and technology.</p>
                         </Card>
-                        <Card>
+                        <Card className="col-span-2 md:col-span-1">
                             <p>Due to being good at computer science, I was invited to a few <Tooltip text="Hochbegabtenstiftungen" tooltip="Institutes for gifted and talented students" /> in 2025!</p>
                         </Card>
                     </div>
