@@ -72,6 +72,7 @@ export default function Home() {
                     </div>
                     <div className="flex flex-wrap gap-2">
                         <Button88x31 source="https://int4.cc/88x31.png" link="https://int4.cc" />
+                        <Button88x31 source="https://raw.githubusercontent.com/NeonGamerBot-QK/NeonGamerBot-QK/refs/heads/main/webring.gif" link="https://saahild.com" />
                         <Button88x31 source="hackclub.png" link="https://hackclub.com" />
                         <Button88x31 source="gg1.png" />
                         <Button88x31 source="blödsinn.gif" />
