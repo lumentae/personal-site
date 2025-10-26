@@ -73,6 +73,11 @@ export default function Home() {
                     <div className="flex flex-wrap gap-2">
                         <Button88x31 source="https://int4.cc/88x31.png" link="https://int4.cc" />
                         <Button88x31 source="hackclub.png" link="https://hackclub.com" />
+                        <Button88x31 source="gg1.png" />
+                        <Button88x31 source="blödsinn.gif" />
+                        <Button88x31 source="internetarchive.gif" />
+                        <Button88x31 source="anybrowser.gif" />
+                        <Button88x31 source="noai.gif" />
                         <Button88x31 source="console_wii.png" />
                         <Button88x31 source="linuxonline.gif" link="https://www.kernel.org/" />
                         <Button88x31 source="hatemac.jpg" />
@@ -81,6 +86,7 @@ export default function Home() {
                         <Button88x31 source="powered-cpp.gif" />
                         <Button88x31 source="transistor_cafe.gif" />
                         <Button88x31 source="transnow2.gif" />
+                        <Button88x31 source="bluearchive.png" />
                     </div>
                     <br/>
 
