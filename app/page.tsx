@@ -65,7 +65,7 @@ export default function Home() {
 
                     <Header heading="buttons" size={3} undertext="feel free to add mine to your website!"></Header>
                     <div className="flex flex-wrap gap-2">
-                        <div onClick={() => navigator.clipboard.writeText(`<a href="https://lumentae.dev"><img src="https://lumentae.dev/button.gif" alt="lumentae" title="lumentae"/></a>`)} className="hover:opacity-75 transition-opacity">
+                        <div onClick={() => navigator.clipboard.writeText(`<a href="https://lumentae.dev"><img src="https://lumentae.dev/button.gif" alt="lumentae" title="lumentae"/></a>`)} className="hover:opacity-75 transition-opacity cursor-pointer">
                             <Button88x31 source="lumentae.gif" />
                         </div>
                         <p className="darken text-sm">(click to copy!)</p>
