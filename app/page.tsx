@@ -20,7 +20,6 @@ export default function Home() {
                             src="https://avatars.githubusercontent.com/u/66220444" 
                             alt="profile picture" 
                             className="w-24 h-24 rounded-full border-2 border-white/50 shrink-0 order-1 md:order-2"
-                            lazy={true}
                         />
                         <div className="flex-1 order-2 md:order-1">
                             <Header heading="about me" size={3}></Header>
