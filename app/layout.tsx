@@ -29,6 +29,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+        <link rel="icon" href="favicon.png" sizes="any" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
