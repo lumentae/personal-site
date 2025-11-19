@@ -79,7 +79,7 @@ export default function Home() {
                         <Button88x31 source="https://raw.githubusercontent.com/NeonGamerBot-QK/NeonGamerBot-QK/refs/heads/main/webring.gif" link="https://saahild.com" />
                         <Button88x31 source="hackclub.png" link="https://hackclub.com" />
                         <Button88x31 source="gg1.png" />
-                        <Button88x31 source="blödsinn.gif" />
+                        <Button88x31 source="bloedsinn.gif" />
                         <Button88x31 source="internetarchive.gif" link="https://archive.org" />
                         <Button88x31 source="anybrowser.gif" />
                         <Button88x31 source="noai.gif" />
