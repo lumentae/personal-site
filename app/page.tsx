@@ -31,24 +31,25 @@ export default function Home() {
                     <br/>
 
                     <Header heading="homelab" size={3}></Header>
-                    <p>This website is hosted from my Dell Optiplex 3070 with <Devicon name="proxmox" wordmark padding={false} /> Proxmox VE 9.0.11.</p>
+                    <p>This website is hosted from my Dell Optiplex 3070 with <Devicon name="proxmox" wordmark padding={false} /> Proxmox VE 9.1.1.</p>
                     <p>I also host Jellyfin on my local network along with the <Tooltip text="arr stack" tooltip="Sonarr, Radarr, Prowlarr, etc" />.</p>
-                    <p>And twice a year I host a minecraft server for friends in my school. <em className="darken">(21 people as of 21.10.2025)</em></p>
-                    <p className="md:pl-6 darken">=&gt; I made utilities for deploying and managing the server! (<a className="darken hover:opacity-80 transition-opacity underline" target="_blank" href="https://github.com/lumentae/provisioner">provisioner</a> and <a className="darken hover:opacity-80 transition-opacity underline" target="_blank" href="https://github.com/lumentae/lattice">lattice</a>)</p>
+                    <p>And twice a year I host a minecraft server for friends in my school. <em className="darken">(21 people)</em></p>
+                    <p className="md:pl-6 darken">=&gt; I made utilities for deploying and managing the server! (<a className="darken hover:opacity-80 transition-opacity underline" target="_blank" href="https://github.com/PlutoniumLabs/provisioner">provisioner</a> and <a className="darken hover:opacity-80 transition-opacity underline" target="_blank" href="https://github.com/PlutoniumLabs/lattice">lattice</a>)</p>
                     <br/>
 
                     <Header heading="school stuff" size={3}></Header>
                     <div className="grid grid-cols-2 md:grid-cols-3 gap-7">
                         <Card>
                             <p>I'm a member of our robotics club.</p>
-                            <p>I don't participate in any competitions, but I love to build and program robots. <em className="darken">(We build them from scratch!)</em></p>
+                            <p>I don't participate in any competitions, but I love to build and program robots!</p>
                         </Card>
                         <Card>
                             <p>I'm also a <Tooltip text="Medienscout" tooltip="Someone that guides and warns younger students of the dangers of media and technology"/> at my school!</p>
                             <p>My job is to guide and warn younger students of the dangers of media and technology.</p>
                         </Card>
                         <Card className="col-span-2 md:col-span-1">
-                            <p>Due to being good at computer science, I was invited to a few <Tooltip text="Hochbegabtenstiftungen" tooltip="Institutes for gifted and talented students" /> in 2025!</p>
+                            <p>I help run stage tech for school events.</p>
+                            <p>Lighting is my main job: cueing scenes, running boards and keeping shows on track.</p>
                         </Card>
                     </div>
                     <br/>
