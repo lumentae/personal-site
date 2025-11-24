@@ -79,7 +79,7 @@ export default function Home() {
                         <Button88x31 source="https://int4.cc/88x31.png" link="https://int4.cc" />
                         <Button88x31 source="https://raw.githubusercontent.com/NeonGamerBot-QK/NeonGamerBot-QK/refs/heads/main/webring.gif" link="https://saahild.com" />
                         <Button88x31 source="hackclub.png" link="https://hackclub.com" />
-                        <Button88x31 source="gg1.png" />
+                        <Button88x31 source="gg1.png" link="https://www.gesetze-im-internet.de/gg/art_1.html"/>
                         <Button88x31 source="bloedsinn.gif" />
                         <Button88x31 source="internetarchive.gif" link="https://archive.org" />
                         <Button88x31 source="anybrowser.gif" />
@@ -93,6 +93,7 @@ export default function Home() {
                         <Button88x31 source="transistor_cafe.gif" />
                         <Button88x31 source="transnow2.gif" />
                         <Button88x31 source="bluearchive.png" />
+                        <Button88x31 source="xkcd.gif" link="https://xkcd.com" />
                     </div>
                     <br/>
 
