@@ -5,22 +5,32 @@ import Project from "@/components/project/Project";
 import { Repository } from "@/components/project/Github";
 
 async function getRepositories(): Promise<Repository[]> {
-    const res = await fetch("https://api.github.com/users/lumentae/repos?per_page=100", {
-        next: { revalidate: 3600 } // Revalidate every hour
+    const endpoints = [
+        "https://api.github.com/users/lumentae/repos?per_page=100",
+        "https://api.github.com/orgs/PlutoniumLabs/repos?per_page=100",
+    ];
+
+    const responses = await Promise.all(
+        endpoints.map((endpoint) =>
+            fetch(endpoint, { next: { revalidate: 3600 } })
+        )
+    );
+
+    responses.forEach((res) => {
+        if (!res.ok) {
+            throw new Error(`Failed to fetch repositories from ${res.url}`);
+        }
     });
-    
-    if (!res.ok) {
-        throw new Error("Failed to fetch repositories");
-    }
-    
-    return res.json();
+
+    const repoGroups = await Promise.all(responses.map((res) => res.json()));
+    return repoGroups.flat();
 }
 
+const excludeRepos = ["lumentae", ".github"];
 export default async function Projects() {
-    const repositories = await getRepositories();
-    
+    const repositories = await getRepositories();    
     const filteredRepos = repositories
-        .filter(repo => !repo.fork && !repo.archived)
+        .filter(repo => !repo.fork && !repo.archived && !excludeRepos.includes(repo.name))
         .sort((a, b) => b.stargazers_count - a.stargazers_count);
 
     return (
