@@ -2,7 +2,47 @@ import Header from "@/components/container/Header";
 import Content from "@/components/container/Content";
 import Common from "@/components/Common";
 import Project from "@/components/project/Project";
-import { Repository } from "@/components/project/Github";
+
+
+export type Repository = {
+    name: string
+    full_name: string
+    html_url: string
+    description: string
+    fork: boolean
+    created_at: string
+    updated_at: string
+    homepage: string
+    size: number
+    stargazers_count: number
+    watchers_count: number
+    language: any
+    has_issues: boolean
+    has_projects: boolean
+    has_downloads: boolean
+    has_wiki: boolean
+    has_pages: boolean
+    has_discussions: boolean
+    forks_count: number
+    mirror_url: any
+    archived: boolean
+    disabled: boolean
+    open_issues_count: number
+    license: License
+    allow_forking: boolean
+    topics: any[]
+    forks: number
+    open_issues: number
+    watchers: number
+}
+
+export type License = {
+    key: string
+    name: string
+    spdx_id: string
+    url: string
+    node_id: string
+}
 
 async function getRepositories(): Promise<Repository[]> {
     const endpoints = [
