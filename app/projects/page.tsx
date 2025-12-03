@@ -58,7 +58,7 @@ async function getRepositories(): Promise<Repository[]> {
 
     responses.forEach((res) => {
         if (!res.ok) {
-            throw new Error(`Failed to fetch repositories from ${res.url}`);
+            throw new Error(`Failed to fetch repositories from ${res.url}: ${res.status} ${res.statusText}`);
         }
     });
 
@@ -67,6 +67,8 @@ async function getRepositories(): Promise<Repository[]> {
 }
 
 const excludeRepos = ["lumentae", ".github"];
+
+export const dynamic = 'force-dynamic';
 export default async function Projects() {
     const repositories = await getRepositories();    
     const filteredRepos = repositories
