@@ -14,7 +14,7 @@ const nextConfig: NextConfig = {
   output: "standalone",
   env: {
     BUILD_TIME: new Date().toISOString(),
-    BUILD_COMMIT: resolveCommitHash(),
+    BUILD_COMMIT: resolveCommitHash()
   },
 };
 

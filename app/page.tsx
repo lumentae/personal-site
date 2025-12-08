@@ -49,7 +49,7 @@ export default function Home() {
                         </Card>
                         <Card className="col-span-2 md:col-span-1">
                             <p>I help run stage tech for school events.</p>
-                            <p>Lighting is my main job: cueing scenes, running boards and keeping shows on track.</p>
+                            <p>Lighting is my main task: cueing scenes, running boards and keeping shows on track.</p>
                         </Card>
                     </div>
                     <br/>
@@ -76,8 +76,8 @@ export default function Home() {
                         <p className="darken text-sm">(click to copy!)</p>
                     </div>
                     <div className="flex flex-wrap gap-2">
-                        <Button88x31 source="https://int4.cc/88x31.png" link="https://int4.cc" />
-                        <Button88x31 source="https://raw.githubusercontent.com/NeonGamerBot-QK/NeonGamerBot-QK/refs/heads/main/webring.gif" link="https://saahild.com" />
+                        <Button88x31 source="https://int4.cc/88x31.png" link="https://int4.cc" friend />
+                        <Button88x31 source="https://raw.githubusercontent.com/NeonGamerBot-QK/NeonGamerBot-QK/refs/heads/main/webring.gif" link="https://saahild.com" friend />
                         <Button88x31 source="hackclub.png" link="https://hackclub.com" />
                         <Button88x31 source="gg1.png" link="https://www.gesetze-im-internet.de/gg/art_1.html"/>
                         <Button88x31 source="bloedsinn.gif" />
