@@ -30,7 +30,7 @@ export default function RootLayout({
       <head>
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
         <link rel="icon" href="favicon.png" sizes="any" />
-        <script src="https://a.lumentae.dev/script.js" data-website-id={process.env.WEBSITE_ID} defer></script>
+        <script src="https://a.lumentae.dev/script.js" data-website-id={`${process.env.WEBSITE_ID}`} defer></script>
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
