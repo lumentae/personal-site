@@ -31,9 +31,9 @@ export default function Home() {
                     <br/>
 
                     <Header heading="homelab" size={3}></Header>
-                    <p>This website is hosted from my Dell Optiplex 3070 with <Devicon name="proxmox" wordmark padding={false} /> Proxmox VE 9.1.1.</p>
+                    <p>This website is hosted from my Dell Optiplex 3070 with <Devicon name="proxmox" wordmark padding={false} /> Proxmox VE 9.1.2.</p>
                     <p>I also host Jellyfin on my local network along with the <Tooltip text="arr stack" tooltip="Sonarr, Radarr, Prowlarr, etc" />.</p>
-                    <p>And twice a year I host a minecraft server for friends in my school. <em className="darken">(21 people)</em></p>
+                    <p>And twice a year I host a minecraft server for friends in my school. <em className="darken">(22 people)</em></p>
                     <p className="md:pl-6 darken">=&gt; I made utilities for deploying and managing the server! (<a className="darken hover:opacity-80 transition-opacity underline" target="_blank" href="https://github.com/PlutoniumLabs/provisioner">provisioner</a> and <a className="darken hover:opacity-80 transition-opacity underline" target="_blank" href="https://github.com/PlutoniumLabs/lattice">lattice</a>)</p>
                     <br/>
 
