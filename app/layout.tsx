@@ -1,19 +1,8 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Oneko from "@/components/Oneko";
 import Background from "@/components/background/background";
 import BodyStyleModifiers from "@/components/BodyStyleModifiers";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "lumentae's personal site",
@@ -33,7 +22,7 @@ export default function RootLayout({
         <script src="https://a.lumentae.dev/script.js" data-website-id={`${process.env.WEBSITE_ID}`} defer></script>
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className="antialiased"
         style={{ colorScheme: "dark" }}
       >
         <div className="h-screen w-screen">
