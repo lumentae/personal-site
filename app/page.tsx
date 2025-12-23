@@ -65,6 +65,8 @@ export default function Home() {
                             <Contact href="https://steamcommunity.com/id/lumentae" name="Steam" />
                             <Contact href="https://anilist.co/user/lumentae" name="AniList" />
                             <Contact href="https://www.roblox.com/users/1578541231/profile" name="Roblox" />
+                            <Contact href="https://x.com/lumentaedev" name="X" />
+                            <Contact href="https://www.instagram.com/lumentae_/" name="Instagram" />
                         </div>
                     </div>
                     <br/>
