@@ -8,6 +8,7 @@ import Card from "@/components/container/Card";
 import Tooltip from "@/components/Tooltip";
 import Button88x31 from "@/components/Button88x31";
 import Devicon from "@/components/icons/Devicon";
+import Contact from "@/components/Contact";
 
 export default function Home() {
     return (
@@ -57,13 +58,13 @@ export default function Home() {
                     <Header heading="contact" size={3}></Header>
                     <div className="flex">
                         <div className="flex flex-wrap gap-2">
-                            <a className="underline hover:opacity-80 transition-opacity" target="_blank" href="mailto:contact@lumentae.dev"><Card>Email</Card></a>
-                            <a className="underline hover:opacity-80 transition-opacity" target="_blank" href="https://github.com/lumentae"><Card>GitHub</Card></a>
-                            <a className="underline hover:opacity-80 transition-opacity" target="_blank" href="https://discord.com/users/695324879964340285"><Card>Discord</Card></a>
-                            <a className="underline hover:opacity-80 transition-opacity" target="_blank" href="https://hackclub.slack.com/team/U08B4GTKLDS"><Card>Slack</Card></a>
-                            <a className="underline hover:opacity-80 transition-opacity" target="_blank" href="https://steamcommunity.com/id/lumentae"><Card>Steam</Card></a>
-                            <a className="underline hover:opacity-80 transition-opacity" target="_blank" href="https://anilist.co/user/lumentae"><Card>AniList</Card></a>
-                            <a className="underline hover:opacity-80 transition-opacity" target="_blank" href="https://www.roblox.com/users/1578541231/profile"><Card>Roblox</Card></a>
+                            <Contact href="mailto:contact@lumentae.dev" name="Email" />
+                            <Contact href="https://github.com/lumentae" name="GitHub" />
+                            <Contact href="https://discord.com/users/695324879964340285" name="Discord" />
+                            <Contact href="https://hackclub.slack.com/team/U08B4GTKLDS" name="Slack" />
+                            <Contact href="https://steamcommunity.com/id/lumentae" name="Steam" />
+                            <Contact href="https://anilist.co/user/lumentae" name="AniList" />
+                            <Contact href="https://www.roblox.com/users/1578541231/profile" name="Roblox" />
                         </div>
                     </div>
                     <br/>
