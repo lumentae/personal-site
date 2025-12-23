@@ -24,7 +24,7 @@ interface SettingsState {
 export const useSettings = create<SettingsState>()(
   persist(
     (set) => ({
-      shaderBackground: true,
+      shaderBackground: false,
       toggleShaderBackground: () => set((state) => ({ 
         shaderBackground: !state.shaderBackground 
       })),
