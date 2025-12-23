@@ -2,7 +2,7 @@ import Header from "@/components/container/Header";
 import Content from "@/components/container/Content";
 import Common from "@/components/Common";
 import Project from "@/components/project/Project";
-
+import HorizontalDivider from "@/components/HorizontalDivider";
 
 export type Repository = {
     name: string
@@ -44,6 +44,16 @@ export type License = {
     node_id: string
 }
 
+export type PinnedRepository = {
+    author: string;
+    name: string;
+    description: string;
+    language: string;
+    languageColor: string;
+    stars: number;
+    forks: number;
+}
+
 async function getRepositories(): Promise<Repository[]> {
     const endpoints = [
         "https://api.github.com/users/lumentae/repos?per_page=100",
@@ -66,19 +76,61 @@ async function getRepositories(): Promise<Repository[]> {
     return repoGroups.flat();
 }
 
+async function getPinned(): Promise<PinnedRepository[]> {
+    const res = await fetch("https://pinned.berrysauce.dev/get/lumentae", { next: { revalidate: 3600 } });
+    if (!res.ok) {
+        throw new Error(`Failed to fetch pinned repositories: ${res.status} ${res.statusText}`);
+    }
+
+    const data = await res.json();
+    console.log(data);
+    return data.map((repo: any) => ({
+        author: repo.author,
+        name: repo.name,
+        description: repo.description,
+        language: repo.language,
+        languageColor: repo.languageColor,
+        stars: repo.stars,
+        forks: repo.forks,
+    }));
+}
+
 const excludeRepos = ["lumentae", ".github"];
 
 export const dynamic = 'force-dynamic';
 export default async function Projects() {
+    const pinned = await getPinned();
     const repositories = await getRepositories();    
     const filteredRepos = repositories
-        .filter(repo => !repo.fork && !repo.archived && !excludeRepos.includes(repo.name))
+        .filter(repo => 
+            !repo.fork &&
+            !repo.archived &&
+            !excludeRepos.includes(repo.name) &&
+            !pinned.some((p: PinnedRepository) => p.name === repo.name)
+        )
         .sort((a, b) => b.stargazers_count - a.stargazers_count);
 
     return (
         <Common>
             <Header heading="Projects" undertext="These are some of the projects I made!" showLinks></Header>
             <Content>
+                <Header heading="Pinned" size={3}></Header>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-7">
+                    {pinned.map((repo) => (
+                        <Project
+                            key={`pinned-${repo.author}/${repo.name}`}
+                            name={repo.author !== "lumentae" ? `${repo.author}/${repo.name}` : repo.name}
+                            description={repo.description}
+                            stars={repo.stars}
+                            forks={repo.forks}
+                            language={repo.language}
+                            repoUrl={`https://github.com/${repo.author}/${repo.name}`}
+                        />
+                    ))}
+                </div>
+                <br />
+                <HorizontalDivider />
+                <br />
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-7">
                     {filteredRepos.map((repo) => (
                         <Project
