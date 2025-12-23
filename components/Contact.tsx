@@ -13,7 +13,7 @@ export default function Contact(props: ContactProps) {
             <img
                 src={`/${props.name}.png`}
                 alt={`${props.name} icon`}
-                className="inline w-8 h-8 mr-3 align-middle"
+                className="inline w-8 h-8 mr-3 align-middle rounded-sm"
             />
             {props.name}
         </Card>
