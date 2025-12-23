@@ -58,9 +58,9 @@ export default function Home() {
                     <Header heading="contact" size={3}></Header>
                     <div className="flex">
                         <div className="flex flex-wrap gap-2">
-                            <Contact href="mailto:contact@lumentae.dev" name="Email" />
+                            <Contact href="https://discord.com/users/695324879964340285" name="Discord" priority />
                             <Contact href="https://github.com/lumentae" name="GitHub" />
-                            <Contact href="https://discord.com/users/695324879964340285" name="Discord" />
+                            <Contact href="mailto:contact@lumentae.dev" name="Email" />
                             <Contact href="https://hackclub.slack.com/team/U08B4GTKLDS" name="Slack" />
                             <Contact href="https://steamcommunity.com/id/lumentae" name="Steam" />
                             <Contact href="https://anilist.co/user/lumentae" name="AniList" />
