@@ -17,9 +17,9 @@ export default function Home() {
                 <Header heading="Hi!" undertext="This is my awesome personal site!!!" showLinks></Header>
                 <Content>
                     <div className="flex flex-col md:flex-row gap-4 items-center md:items-start">
-                        <img 
-                            src="https://avatars.githubusercontent.com/u/66220444" 
-                            alt="profile picture" 
+                        <img
+                            src="https://avatars.githubusercontent.com/u/66220444"
+                            alt="profile picture"
                             className="w-24 h-24 rounded-full border-2 border-white/50 shrink-0 order-1 md:order-2"
                         />
                         <div className="flex-1 order-2 md:order-1">
@@ -29,14 +29,14 @@ export default function Home() {
                             <p>I'm also a member of <a className="darken hover:opacity-80 transition-opacity underline" target="_blank" href="https://hackclub.com">Hackclub</a>!</p>
                         </div>
                     </div>
-                    <br/>
+                    <br />
 
                     <Header heading="homelab" size={3}></Header>
                     <p>This website is hosted from my Dell Optiplex 3070 with <Devicon name="proxmox" wordmark padding={false} /> Proxmox VE 9.1.2.</p>
                     <p>I also host Jellyfin on my local network along with the <Tooltip text="arr stack" tooltip="Sonarr, Radarr, Prowlarr, etc" />.</p>
                     <p>And twice a year I host a minecraft server for friends in my school. <em className="darken">(22 people)</em></p>
                     <p className="md:pl-6 darken">=&gt; I made utilities for deploying and managing the server! (<a className="darken hover:opacity-80 transition-opacity underline" target="_blank" href="https://github.com/PlutoniumLabs/provisioner">provisioner</a> and <a className="darken hover:opacity-80 transition-opacity underline" target="_blank" href="https://github.com/PlutoniumLabs/lattice">lattice</a>)</p>
-                    <br/>
+                    <br />
 
                     <Header heading="school stuff" size={3}></Header>
                     <div className="grid grid-cols-2 md:grid-cols-3 gap-7">
@@ -45,7 +45,7 @@ export default function Home() {
                             <p>I don't participate in any competitions, but I love to build and program robots!</p>
                         </Card>
                         <Card>
-                            <p>I'm also a <Tooltip text="Medienscout" tooltip="Someone that guides and warns younger students of the dangers of media and technology"/> at my school!</p>
+                            <p>I'm also a <Tooltip text="Medienscout" tooltip="Someone that guides and warns younger students of the dangers of media and technology" /> at my school!</p>
                             <p>My job is to guide and warn younger students of the dangers of media and technology.</p>
                         </Card>
                         <Card className="col-span-2 md:col-span-1">
@@ -53,14 +53,14 @@ export default function Home() {
                             <p>Lighting is my main task: cueing scenes, running boards and keeping shows on track.</p>
                         </Card>
                     </div>
-                    <br/>
+                    <br />
 
                     <Header heading="contact" size={3}></Header>
                     <div className="flex">
                         <div className="flex flex-wrap gap-2">
                             <Contact href="https://discord.com/users/695324879964340285" name="Discord" priority />
+                            <Contact href="mailto:contact@lumentae.dev" name="Email" priority />
                             <Contact href="https://github.com/lumentae" name="GitHub" />
-                            <Contact href="mailto:contact@lumentae.dev" name="Email" />
                             <Contact href="https://hackclub.slack.com/team/U08B4GTKLDS" name="Slack" />
                             <Contact href="https://steamcommunity.com/id/lumentae" name="Steam" />
                             <Contact href="https://anilist.co/user/lumentae" name="AniList" />
@@ -69,7 +69,7 @@ export default function Home() {
                             <Contact href="https://www.instagram.com/lumentae_/" name="Instagram" />
                         </div>
                     </div>
-                    <br/>
+                    <br />
 
                     <Header heading="buttons" size={3} undertext="feel free to add mine to your website!"></Header>
                     <div className="flex flex-wrap gap-2">
@@ -82,7 +82,7 @@ export default function Home() {
                         <Button88x31 source="https://int4.cc/88x31.png" link="https://int4.cc" friend />
                         <Button88x31 source="https://raw.githubusercontent.com/NeonGamerBot-QK/NeonGamerBot-QK/refs/heads/main/webring.gif" link="https://saahild.com" friend />
                         <Button88x31 source="hackclub.png" link="https://hackclub.com" />
-                        <Button88x31 source="gg1.png" link="https://www.gesetze-im-internet.de/gg/art_1.html"/>
+                        <Button88x31 source="gg1.png" link="https://www.gesetze-im-internet.de/gg/art_1.html" />
                         <Button88x31 source="bloedsinn.gif" />
                         <Button88x31 source="internetarchive.gif" link="https://archive.org" />
                         <Button88x31 source="anybrowser.gif" />
@@ -98,7 +98,7 @@ export default function Home() {
                         <Button88x31 source="bluearchive.png" />
                         <Button88x31 source="xkcd.gif" link="https://xkcd.com" />
                     </div>
-                    <br/>
+                    <br />
 
                     <Header heading="tech" size={3}></Header>
                     <TechStack categories={[
