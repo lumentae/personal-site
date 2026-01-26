@@ -24,28 +24,27 @@ export default function Home() {
                         />
                         <div className="flex-1 order-2 md:order-1">
                             <Header heading="about me" size={3}></Header>
-                            <p>I love working with computers and tinkering with hardware projects!</p>
-                            <p>Outside of tech, I enjoy listening to music <em className="darken">(particularily jazz!)</em> and biking.</p>
+                            <p>I love everything about computers and working with them!</p>
+                            <p>Outside of tech, I enjoy listening to music <em className="darken">(particularily japanese, korean and german)</em> and biking.</p>
                             <p>I'm also a member of <a className="darken hover:opacity-80 transition-opacity underline" target="_blank" href="https://hackclub.com">Hackclub</a>!</p>
                         </div>
                     </div>
                     <br />
 
                     <Header heading="homelab" size={3}></Header>
-                    <p>This website is hosted from my Dell Optiplex 3070 with <Devicon name="proxmox" wordmark padding={false} /> Proxmox VE 9.1.2.</p>
-                    <p>I also host Jellyfin on my local network along with the <Tooltip text="arr stack" tooltip="Sonarr, Radarr, Prowlarr, etc" />.</p>
-                    <p>And twice a year I host a minecraft server for friends in my school. <em className="darken">(22 people)</em></p>
+                    <p>This website is hosted from my Dell Optiplex 3070 with <Devicon name="proxmox" wordmark padding={false} /> Proxmox VE 9.</p>
+                    <p>Twice a year I also host a minecraft server for friends in my school. <em className="darken">(22 people)</em></p>
                     <p className="md:pl-6 darken">=&gt; I made utilities for deploying and managing the server! (<a className="darken hover:opacity-80 transition-opacity underline" target="_blank" href="https://github.com/PlutoniumLabs/provisioner">provisioner</a> and <a className="darken hover:opacity-80 transition-opacity underline" target="_blank" href="https://github.com/PlutoniumLabs/lattice">lattice</a>)</p>
                     <br />
 
                     <Header heading="school stuff" size={3}></Header>
                     <div className="grid grid-cols-2 md:grid-cols-3 gap-7">
                         <Card>
-                            <p>I'm a member of our robotics club.</p>
-                            <p>I don't participate in any competitions, but I love to build and program robots!</p>
+                            <p>I'm a member of my school's robotics club.</p>
+                            <p>I usually don't participate in any competitions, but I helped out with the <a href="https://github.com/MOEP-Robotik/Forschungsprojekt_fll_2026">FLL 2026 research project!</a></p>
                         </Card>
                         <Card>
-                            <p>I'm also a <Tooltip text="Medienscout" tooltip="Someone that guides and warns younger students of the dangers of media and technology" /> at my school!</p>
+                            <p>I'm also a <a href="https://www.medienscouts-nrw.de"><Tooltip text="Medienscout" tooltip="Someone that guides and warns younger students of the dangers of media and technology" /></a> at my school!</p>
                             <p>My job is to guide and warn younger students of the dangers of media and technology.</p>
                         </Card>
                         <Card className="col-span-2 md:col-span-1">
@@ -64,9 +63,6 @@ export default function Home() {
                             <Contact href="https://hackclub.slack.com/team/U08B4GTKLDS" name="Slack" />
                             <Contact href="https://steamcommunity.com/id/lumentae" name="Steam" />
                             <Contact href="https://anilist.co/user/lumentae" name="AniList" />
-                            <Contact href="https://www.roblox.com/users/1578541231/profile" name="Roblox" />
-                            <Contact href="https://x.com/lumentaedev" name="X" />
-                            <Contact href="https://www.instagram.com/lumentae_/" name="Instagram" />
                         </div>
                     </div>
                     <br />
