@@ -32,7 +32,8 @@ export default function Home() {
                     <br />
 
                     <Header heading="homelab" size={3}></Header>
-                    <p>This website is hosted from my Dell Optiplex 3070 with <Devicon name="proxmox" wordmark padding={false} /> Proxmox VE 9.</p>
+                    <p>This website is hosted from my homelab with <Devicon name="proxmox" wordmark padding={false} /> Proxmox VE 9.</p>
+                    <p>You can find me in DN42 <a href="https://map.iedon.net/#4242423037" className="underline">here!</a></p>
                     <p>Twice a year I also host a minecraft server for friends in my school. <em className="darken">(22 people)</em></p>
                     <p className="md:pl-6 darken">=&gt; I made utilities for deploying and managing the server! (<a className="darken hover:opacity-80 transition-opacity underline" target="_blank" href="https://github.com/PlutoniumLabs/provisioner">provisioner</a> and <a className="darken hover:opacity-80 transition-opacity underline" target="_blank" href="https://github.com/PlutoniumLabs/lattice">lattice</a>)</p>
                     <br />
@@ -41,7 +42,7 @@ export default function Home() {
                     <div className="grid grid-cols-2 md:grid-cols-3 gap-7">
                         <Card>
                             <p>I'm a member of my school's robotics club.</p>
-                            <p>I usually don't participate in any competitions, but I helped out with the <a href="https://github.com/MOEP-Robotik/Forschungsprojekt_fll_2026">FLL 2026 research project!</a></p>
+                            <p>I usually don't participate in any competitions, but I helped out with the <a href="https://github.com/MOEP-Robotik/Forschungsprojekt_fll_2026" className="underline">FLL 2026 research project!</a></p>
                         </Card>
                         <Card>
                             <p>I'm also a <a href="https://www.medienscouts-nrw.de"><Tooltip text="Medienscout" tooltip="Someone that guides and warns younger students of the dangers of media and technology" /></a> at my school!</p>
