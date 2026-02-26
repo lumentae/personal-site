@@ -28,7 +28,7 @@ export default function Home() {
             />
             <div className="flex-1 order-2 md:order-1">
               <Header heading="about me" size={3}></Header>
-              <p>I love everything about computers and working with them!</p>
+              <p>My name is Fynn and I love everything about computers and working with them!</p>
               <p>
                 Outside of tech, I enjoy listening to music{" "}
                 <em className="darken">
