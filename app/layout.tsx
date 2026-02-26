@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Oneko from "@/components/Oneko";
-import Background from "@/components/background/background";
 import BodyStyleModifiers from "@/components/BodyStyleModifiers";
+import LazyBackground from "@/components/LazyBackground";
 
 export const metadata: Metadata = {
     title: "lumentae's personal site",
@@ -26,7 +26,7 @@ export default function RootLayout({
                 style={{ colorScheme: "dark" }}
             >
                 <div className="h-screen w-screen">
-                    <Background />
+                    <LazyBackground />
                 </div>
                 <Oneko />
                 <BodyStyleModifiers />

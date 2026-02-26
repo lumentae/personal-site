@@ -1,8 +1,4 @@
-import HorizontalDivider from "./HorizontalDivider";
 import ContentContainer from "./container/ContentContainer";
-import Header from "./container/Header";
-import Content from "./container/Content";
-import Background from "./background/background";
 import { ReactNode } from "react";
 
 type CommonProps = {

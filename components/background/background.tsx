@@ -4,7 +4,6 @@ import * as THREE from "three";
 import { Canvas, useFrame, extend, useThree } from "@react-three/fiber";
 import { shaderMaterial } from "@react-three/drei";
 import { useRef, useMemo } from "react";
-import { useSettings } from "@/store/zustand";
 
 const CreationMaterial = shaderMaterial(
     {
@@ -29,8 +28,8 @@ const CreationMaterial = shaderMaterial(
         float snow = 0.0;
         float gradient = 0.0;
         float random = fract(sin(dot(fragCoord.xy,vec2(12.9898,78.233)))* 43758.5453);
-        for(int k=0;k<6;k++){
-            for(int i=0;i<12;i++){
+        for(int k=0;k<3;k++){
+            for(int i=0;i<6;i++){
                 float cellSize = 2.0 + (float(i)*3.0);
                 float downSpeed = 0.3+(sin(iTime*0.4+float(k+i*20))+1.0)*0.00008;
 
@@ -86,12 +85,6 @@ const ShaderObject = () => {
 }
 
 export default function Background() {
-    const { shaderBackground } = useSettings();
-
-    if (!shaderBackground) {
-        return null;
-    }
-
     return (
         <Canvas orthographic camera={{ position: [0, 0, 1], zoom: 1 }}>
             <ShaderObject />
