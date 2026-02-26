@@ -6,20 +6,20 @@ import { shaderMaterial } from "@react-three/drei";
 import { useRef, useMemo } from "react";
 
 const CreationMaterial = shaderMaterial(
-    {
-        iDate: new THREE.Vector4(),
-        iTime: 0.,
-        iResolution: new THREE.Vector2(),
-        iMouse: new THREE.Vector2(),
-    },
-    `
+  {
+    iDate: new THREE.Vector4(),
+    iTime: 0,
+    iResolution: new THREE.Vector2(),
+    iMouse: new THREE.Vector2(),
+  },
+  `
     varying vec2 vUv;
     void main() {
         vUv = uv;
         gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
     }
     `,
-    `
+  `
     uniform float iTime;
     uniform vec2 iResolution;
     varying vec2 vUv;
@@ -55,39 +55,41 @@ const CreationMaterial = shaderMaterial(
     void main() {
         mainImage(gl_FragColor, vUv * iResolution.xy);
     }
-    `
+    `,
 );
 
 extend({ CreationMaterial });
 const ShaderObject = () => {
-    const mesh = useRef<THREE.Mesh>(null);
-    const { size } = useThree();
+  const mesh = useRef<THREE.Mesh>(null);
+  const { size } = useThree();
 
-    useFrame((_state, delta: number) => {
-        (mesh.current!.material as THREE.ShaderMaterial).uniforms.iTime.value += delta;
-    });
+  useFrame((_state, delta: number) => {
+    (mesh.current!.material as THREE.ShaderMaterial).uniforms.iTime.value +=
+      delta;
+  });
 
-    const uniforms = useMemo(() => (
-        {
-            iTime: 1.0,
-            iResolution: new THREE.Vector2(),
-            iMouse: new THREE.Vector2(),
-        }
-    ), []);
+  const uniforms = useMemo(
+    () => ({
+      iTime: 1.0,
+      iResolution: new THREE.Vector2(),
+      iMouse: new THREE.Vector2(),
+    }),
+    [],
+  );
 
-    return (
-        <mesh ref={mesh}>
-            <planeGeometry args={[size.width, size.height]} />
-            {/* @ts-expect-error: creationMaterial is a custom material extended at runtime */}
-            <creationMaterial {...uniforms} iResolution={[size.width, size.height]} />
-        </mesh>
-    )
-}
+  return (
+    <mesh ref={mesh}>
+      <planeGeometry args={[size.width, size.height]} />
+      {/* @ts-expect-error: creationMaterial is a custom material extended at runtime */}
+      <creationMaterial {...uniforms} iResolution={[size.width, size.height]} />
+    </mesh>
+  );
+};
 
 export default function Background() {
-    return (
-        <Canvas orthographic camera={{ position: [0, 0, 1], zoom: 1 }}>
-            <ShaderObject />
-        </Canvas>
-    );
+  return (
+    <Canvas orthographic camera={{ position: [0, 0, 1], zoom: 1 }}>
+      <ShaderObject />
+    </Canvas>
+  );
 }

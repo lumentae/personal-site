@@ -3,14 +3,16 @@
 import dynamic from "next/dynamic";
 import { useSettings } from "@/store/zustand";
 
-const Background = dynamic(() => import("./background/background"), { ssr: false });
+const Background = dynamic(() => import("./background/background"), {
+  ssr: false,
+});
 
 export default function LazyBackground() {
-    const { shaderBackground } = useSettings();
+  const { shaderBackground } = useSettings();
 
-    if (!shaderBackground) {
-        return null;
-    }
+  if (!shaderBackground) {
+    return null;
+  }
 
-    return <Background />;
+  return <Background />;
 }

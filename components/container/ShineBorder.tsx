@@ -1,25 +1,25 @@
-"use client"
+"use client";
 
 // Taken from https://magicui.design/docs/components/shine-border
 
-import * as React from "react"
+import * as React from "react";
 
 interface ShineBorderProps extends React.HTMLAttributes<HTMLDivElement> {
   /**
    * Width of the border in pixels
    * @default 1
    */
-  borderWidth?: number
+  borderWidth?: number;
   /**
    * Duration of the animation in seconds
    * @default 14
    */
-  duration?: number
+  duration?: number;
   /**
    * Color of the border, can be a single color or an array of colors
    * @default "#000000"
    */
-  shineColor?: string | string[]
+  shineColor?: string | string[];
 }
 
 /**
@@ -59,5 +59,5 @@ export default function ShineBorder({
       }
       {...props}
     />
-  )
+  );
 }

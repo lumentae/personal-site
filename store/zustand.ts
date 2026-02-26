@@ -1,5 +1,5 @@
-import { create } from 'zustand'
-import { persist } from 'zustand/middleware'
+import { create } from "zustand";
+import { persist } from "zustand/middleware";
 
 interface SettingsState {
   shaderBackground: boolean;
@@ -7,7 +7,7 @@ interface SettingsState {
 
   oneko: boolean;
   toggleOneko: () => void;
-  
+
   projectColors: boolean;
   toggleProjectColors: () => void;
 
@@ -25,33 +25,38 @@ export const useSettings = create<SettingsState>()(
   persist(
     (set) => ({
       shaderBackground: false,
-      toggleShaderBackground: () => set((state) => ({ 
-        shaderBackground: !state.shaderBackground 
-      })),
+      toggleShaderBackground: () =>
+        set((state) => ({
+          shaderBackground: !state.shaderBackground,
+        })),
       oneko: true,
-      toggleOneko: () => set((state) => ({
-        oneko: !state.oneko
-      })),
+      toggleOneko: () =>
+        set((state) => ({
+          oneko: !state.oneko,
+        })),
       projectColors: false,
-      toggleProjectColors: () => set((state) => ({
-        projectColors: !state.projectColors
-      })),
+      toggleProjectColors: () =>
+        set((state) => ({
+          projectColors: !state.projectColors,
+        })),
       backgroundGradient: false,
-      toggleBackgroundGradient: () => set((state) => ({
-        backgroundGradient: !state.backgroundGradient
-      })),
+      toggleBackgroundGradient: () =>
+        set((state) => ({
+          backgroundGradient: !state.backgroundGradient,
+        })),
       seasonalEvents: false,
-      toggleSeasonalEvents: () => set((state) => ({
-        seasonalEvents: !state.seasonalEvents
-      })),
+      toggleSeasonalEvents: () =>
+        set((state) => ({
+          seasonalEvents: !state.seasonalEvents,
+        })),
       _hasHydrated: false,
       setHasHydrated: (state: boolean) => set({ _hasHydrated: state }),
     }),
     {
-      name: 'settings-storage', // localStorage key
+      name: "settings-storage", // localStorage key
       onRehydrateStorage: () => (state) => {
         state?.setHasHydrated(true);
       },
-    }
-  )
-)
+    },
+  ),
+);

@@ -4,7 +4,11 @@
 :root {
   --foreground: #fff;
   --background: #000;
-  --background-gradient: linear-gradient(180deg,rgb(0, 0, 0) 0%, rgb(26, 26, 26) 100%);
+  --background-gradient: linear-gradient(
+    180deg,
+    rgb(0, 0, 0) 0%,
+    rgb(26, 26, 26) 100%
+  );
 }
 
 .seasonalEvents {
@@ -18,7 +22,7 @@ body {
 }
 
 body::before {
-  content: '';
+  content: "";
   position: fixed;
   width: 100%;
   height: 100%;
@@ -42,14 +46,17 @@ canvas {
 }
 
 @keyframes fadeIn {
-  to { opacity: 1; }
+  to {
+    opacity: 1;
+  }
 }
 
 .darken {
   filter: brightness(60%);
 }
 
-p, span {
+p,
+span {
   @apply transition-colors;
 }
 
@@ -62,7 +69,7 @@ p, span {
 
 @theme inline {
   --animate-shine: shine var(--duration) infinite linear;
- 
+
   @keyframes shine {
     0% {
       background-position: 0% 0%;
